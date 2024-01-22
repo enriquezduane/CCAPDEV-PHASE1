@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <nav class="navigation-bar">
+        <figure>
+            <img src="images/biden.jpg" alt="Website Logo" class="logo">
+            <div>
+                <a href="register.html">Register</a>
+                <a href="#">Login</a>
+            </div>
+        </figure>
+    </nav>
+</header>
+<main>
+    <div class="register-container">
+        <form action="/submit-registration" method="POST" class="register-form">
+            <img src="images/angryporing.png" alt="poring" class="register-img">
+            <h2>Register</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="register-button">Register</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <img src="images/ragnaroklogo.png" alt="Footer Icon" class="footer-img">
+    <p class="copyright">© Copyright 2024</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,257 @@
+/*index.html styles */
+* {
+    font-family: Merienda, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #282c34;
+    color: #abb2bf;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+body {
+    background-color: #282c34; /* Doom Emacs background */
+    color: #abb2bf; /* Light gray text for contrast */
+}
+
+a {
+    text-decoration: none;
+    color: #61afef;
+}
+
+a:hover {
+    color: #e06c75; /* Magenta on hover */
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navigation-bar {
+    background-color: #21252b; /* Dark gray */
+    padding: 10px;
+}
+
+.navigation-bar figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-bar a{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.logo {
+    border: 1px solid #61afef; /* Blue border */
+    border-radius: 50%;
+    width: 50px;
+}
+
+.navigation-bar form {
+    justify-self: end;
+    align-self: end;
+}
+
+.posts-header {
+    margin: 20px 50px;
+    display: grid;
+    grid-template-columns: auto 10% 5% 25%;
+    align-items: baseline;
+}
+
+.posts-header-img {
+    width: 275px;
+    height: 125px;
+}
+
+.posts-header label {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.posts-header a {
+    font-size: 25px;
+    justify-self: center;
+}
+
+.posts-header form {
+    justify-self: flex-end;
+}
+
+button, input[type="submit"], input[type="text"] {
+    font-family: 'Arial', sans-serif;
+    border-radius: 4px;
+}
+
+button, input[type="submit"] {
+    background-color: #61afef; /* Blue for buttons */
+    color: #282c34;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #e06c75; /* Magenta on hover */
+    color: #abb2bf;
+}
+
+input[type="text"] {
+    border: 1px solid #21252b;
+    padding: 8px;
+    background-color: #282c34; /* Doom Emacs background */
+    color: #abb2bf;
+}
+
+.post-container {
+    background-color: #2c313a; /* Darker gray for posts */
+    padding: 10px;
+    margin: 20px 50px;
+    border: 1px none #21252b;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-container li {
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 10px 10px;
+    border-bottom: 1px solid #21252b;
+    margin: 10px 10px;
+    gap: 30px;
+}
+
+.post-container figure {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.post-container figure figcaption {
+    line-height: 1.7;
+}
+
+.post-container .username {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-icon {
+    border: 2px solid #61afef; /* Blue border */
+    border-radius: 50%;
+    width: 100px;
+    margin: 20px;
+}
+
+.post-content {
+    display: grid;
+    grid-template-rows: 20% auto;
+    padding-top: 40px;
+    gap: 10px;
+}
+
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    color: #abb2bf;
+    background-color: #21252b;
+    padding: 5px 10px;
+    border: 1px solid #282c34;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #e06c75;
+    color: #abb2bf;
+}
+
+footer {
+    background-color: #21252b; /* Dark gray footer */
+    color: #abb2bf;
+    text-align: center;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+.footer-img {
+     height: 135px;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+/* register.html styles */
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #282c34; /* Matching Doom Emacs background */
+    color: #abb2bf;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register-form h2 {
+    text-align: center;
+}
+
+.register-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    padding: 8px;
+    border: 1px solid #21252b;
+    border-radius: 4px;
+    background-color: #282c34; /* Doom Emacs background */
+    color: #abb2bf;
+}
+
+.register-form .register-button {
+    background-color: #61afef; /* Blue for buttons */
+    color: #282c34;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-form .register-button:hover {
+    background-color: #e06c75; /* Magenta on hover */
+    color: #abb2bf;
+}
+
+.register-img {
+    height: 300px;
+    width: 400px;
+}
