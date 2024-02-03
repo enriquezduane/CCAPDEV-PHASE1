@@ -138,3 +138,138 @@ header img {
 .inner-border {
     border: solid 1px #ffff1a;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.post-logo {
+    text-align: center;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%; /* or whatever width you want for your table */
+}
+
+td {
+    border: 1px solid #ffff1a; /* Example border color */
+    padding: 8px;
+    text-align: left;
+}
+
+thead {
+    font-family: Romance, serif;
+    font-size: 30px;
+    color: white;
+}
+
+thead th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody tr {
+    background-color: #000033; /* Example body row background color */
+    color: #abb2bf; /* Example body row text color */
+}
+
+tbody tr strong {
+    color: white;
+}
+
+td[colspan="5"], td[colspan="4"] {
+    font-family: Romance, serif;
+    font-size: 30px;
+    background-size: 50%;
+    background-image:
+            linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)),
+            url('/images/retro-pizza.gif');
+    background-blend-mode: screen;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 10px;
+    margin: 20px 200px;
+    font-weight: 600;
+    color: white;
+}
+
+a[href="#top"] {
+    text-align: center;
+    position: relative;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(40, 64, 80, 0.6); /* Black w/ opacity */
+}
+
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #313131; /* Dark background color */
+    border-radius: 8px;
+    border: 1px solid #f0f0f0; /* Light border */
+    box-shadow: 0 0 10px rgba(240, 240, 240, 0.3); /* Light box shadow */
+    font-family: 'Press Start 2P', cursive;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-content {
+    text-align: center;
+    border: 1px solid #f0f0f0; /* Light border */
+    box-shadow: 0 0 10px rgba(240, 240, 240, 0.3); /* Light box shadow */
+    border-radius: 4px; /* Adjust border radius if needed */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+
+label, input, button {
+    margin: 10px 0;
+}
+
+input, button {
+    padding: 5px;
+    border: 1px solid #f0f0f0; /* Light border */
+    background-color: #313131; /* Dark background color */
+    color: #f0f0f0; /* Light text color */
+    font-family: 'Press Start 2P', cursive;
+}
+
+.close-btn {
+    border: none;
+    font-size: 18px;
+    color: #f0f0f0; /* Light text color */
+}
+
+.modal-content hr {
+    border: 1px solid;
+    margin: 20px 5px;
+}
+
+.modal-content span {
+    text-align: center;
+    margin: 20px;
+}
