@@ -191,6 +191,41 @@ td[colspan="5"], td[colspan="4"] {
     text-align: center;
 }
 
+.info-center-header {
+    font-family: Romance, serif;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-center-table {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-button {
+    border-radius: 4px; /* Rounded corners */
+    transition: 0.5s ease; /* Transition effect for background color */
+    margin-right: 10px;
+}
+
+.accordion-button:after {
+    font-size: 15px;
+    content: '\02795';
+}
+
+
+.active, .accordion-button:hover {
+    background-color: rgba(103, 89, 89, 0.3);
+}
+
+.active:after {
+    content: '\2796';
+}
+
 footer {
     display: flex;
     justify-content: space-between;

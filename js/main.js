@@ -15,3 +15,15 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
+document.querySelector('.accordion-button').onclick = function() {
+    this.classList.toggle("active");
+
+    const table = document.querySelector('.info-center-table');
+
+    if (table.style.display === "") {
+        table.style.display = "none";
+    } else {
+        table.style.display = "";
+    }
+}
