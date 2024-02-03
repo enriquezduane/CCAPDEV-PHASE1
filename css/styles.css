@@ -28,6 +28,32 @@ body {
     min-height: 100vh;
 }
 
+.dashed-black-container {
+    border: 1px solid #f0f0f0; /* Light border */
+    box-shadow: 0 0 10px rgba(240, 240, 240, 0.3); /* Light box shadow */
+    border-radius: 8px;
+    background-color: black;
+}
+
+.container-margin {
+    margin: 20px 200px;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    transition: 0.5s;
+}
+
+a:hover {
+    background-color: transparent;
+    color: #ff9200;
+    text-decoration: none;
+}
+
 .shade {
     background-image: url('/images/snow.gif');
     background-size: 250px;
@@ -87,13 +113,7 @@ header img {
     margin-right: 10px;
 }
 
-.dashed-black-container {
-    border: 1px dashed #6b6b6b;
-    background-color: black;
-}
-
 .ragnarok-logo-frame {
-    margin: 20px 200px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -108,14 +128,13 @@ header img {
             0 0 10px #00BFFF,
             0 0 20px #1E90FF,
             0 0 40px #0000FF;
+    margin-left: 20px;
 }
 
-footer {
-    display: flex;
-    font-family: 'basiic', serif;
-    justify-content: space-between;
-    padding: 3px 10px;
-    margin: 20px 200px;
-    font-weight: 600;
-    color: #ffff1a;
+.content-container {
+    padding: 15px 15px;
+}
+
+.inner-border {
+    border: solid 1px #ffff1a;
 }
