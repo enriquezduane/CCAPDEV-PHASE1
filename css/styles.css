@@ -198,7 +198,7 @@ td {
 .post-logo {
     text-align: center;
 }
-tbody tr {
+tbody tr, .info-center-frame p{
     background-color: #000033; /* Example body row background color */
     color: #abb2bf; /* Example body row text color */
 }
@@ -207,7 +207,7 @@ tbody tr strong {
     color: white;
 }
 
-td[colspan="5"], td[colspan="4"], .info-center-frame div {
+td[colspan="5"], td[colspan="4"], .info-center-frame div{
     font-family: Romance, serif;
     font-size: 30px;
     background-size: 50%;
@@ -258,8 +258,9 @@ td[colspan="5"], td[colspan="4"], .info-center-frame div {
     flex-direction: column;
 }
 
-.forum-stats {
-    flex: 1;
+.info-center-frame p {
+    padding: 10px;
+    line-height: 1.5em;
 }
 
 footer {
@@ -287,7 +288,7 @@ footer {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0);
     opacity: 0;
-    transition: background-color 1s ease;
+    transition: background-color 0.5s ease;
     /* Updated to black with transparency */
 }
 

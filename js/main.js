@@ -21,7 +21,7 @@ window.addEventListener('click', function(event) {
 
 // Accordion functions
 const accordionButton = document.querySelector('.accordion-button');
-const accordionContent = document.querySelector('.info-center-content');
+const accordionContent = document.querySelector('.info-center-frame');
 
 accordionButton.addEventListener('click', function() {
     this.classList.toggle('active');
