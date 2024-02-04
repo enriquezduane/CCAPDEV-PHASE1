@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-color: #6040b1 #0b0618;
 }
 
 body {
@@ -197,13 +198,6 @@ td {
 .post-logo {
     text-align: center;
 }
-
-.post-logo img {
-    transform: scale(1.5); /* Adjust scale as needed */
-    width: 40px; /* Adjust or remove width and height if using scale */
-    height: 40px; /* Adjust or remove width and height if using scale */
-}
-
 tbody tr {
     background-color: #000033; /* Example body row background color */
     color: #abb2bf; /* Example body row text color */
@@ -213,7 +207,7 @@ tbody tr strong {
     color: white;
 }
 
-td[colspan="5"], td[colspan="4"] {
+td[colspan="5"], td[colspan="4"], .info-center-frame div {
     font-family: Romance, serif;
     font-size: 30px;
     background-size: 50%;
@@ -222,7 +216,7 @@ td[colspan="5"], td[colspan="4"] {
             url('/images/retro-pizza.gif');
     background-blend-mode: screen;
     color: white;
-    text-align: center;
+    text-align: left;
 }
 
 .info-center-header {
@@ -232,12 +226,6 @@ td[colspan="5"], td[colspan="4"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.info-center-content {
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    max-height: 1000px; /* higher than actual height to allow accordion animation on first click */
 }
 
 .accordion-button {
@@ -259,6 +247,19 @@ td[colspan="5"], td[colspan="4"] {
 
 .active:after {
     content: '\2796';
+}
+
+.info-center-frame {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 1000px; /* higher than actual height to allow accordion animation on first click */
+    border: 1px solid #8F3E97;
+    display: flex;
+    flex-direction: column;
+}
+
+.forum-stats {
+    flex: 1;
 }
 
 footer {
