@@ -14,6 +14,21 @@
     src: url('/fonts/RomanceA.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Webfont';
+    src: url('/fonts/000webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Yoster';
+    src: url('/fonts/yoster.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Heart';
+    src: url('/fonts/heartfont.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -120,6 +135,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding-right: 15px;
+    margin-top: 15px;
 }
 
 header div {
@@ -273,9 +289,10 @@ td[colspan="5"], td[colspan="4"],
 }
 
 footer {
+    font-family: 'basiic', serif;
     display: flex;
     justify-content: space-between;
-    padding: 3px 10px;
+    padding: 10px 10px 10px 10px;
     margin: 20px 200px;
     font-weight: 600;
     color: white;
@@ -529,6 +546,7 @@ footer {
 }
 
 .registration-form header {
+    margin-top: 0;
     border-bottom: 1px solid #ff00ff;
 }
 
@@ -588,4 +606,330 @@ footer {
 .button-area button:hover {
     background-color: #ff00ff; /* Magenta for hover */
     color: #fff; /* White text for readability */
+}
+
+@keyframes neon-flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow:
+                0 0 4px #ff66ff,
+                0 0 11px #ff66ff,
+                0 0 19px #ff66ff,
+                0 0 40px #ff00ff,
+                0 0 80px #ff00ff,
+                0 0 90px #ff00ff,
+                0 0 100px #ff00ff,
+                0 0 150px #ff00ff;
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px #0000FF, 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #0000FF, 0 0 30px #FF4DA6, 0 0 40px #FF4DA6, 0 0 50px #FF4DA6, 0 0 60px #FF4DA6;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #0000FF, 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF;
+    }
+}
+
+@keyframes pulsing-glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #FF6347, 0 0 30px #FF6347, 0 0 40px #FF4500, 0 0 50px #FF4500, 0 0 60px #FF4500;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -50%;
+    }
+
+    100% {
+        background-position: 150%;
+    }
+}
+
+@keyframes shoot-arrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.topics {
+    font-family: 'Webfont', Times, serif;
+    font-size: 30px;
+    border: 1px solid white;
+}
+
+.topics th {
+    background: #000033;
+    border: 1px solid #8F3E97;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.subheading {
+    background-image: none !important;
+    border: none;
+    font-family: 'Heart', sans-serif !important;
+    font-size: 1em;
+    /* Slightly larger to make it more readable */
+    text-align: center;
+    color: #66ff66;
+    /* Neon green to fit the theme */
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background to help it stand out */
+    padding: 5px;
+    /* Add padding to create space around the text */
+    border-radius: 5px;
+    /* Rounded corners for a modern look */
+    animation: neon-flicker 1.5s infinite alternate;
+    /* Apply the neon flicker effect */
+}
+
+/* .subheading { */
+/*   background-image: none !important; */
+/*   border: none; */
+/*   font-family: 'Heart' !important; */
+/*   font-size: 0.9em; */
+/*   text-align: center; */
+/*   color: #666; */
+/*   font-style: italic; */
+/* } */
+
+.center-table-data {
+    text-align: center;
+}
+
+.username {
+    font-family: 'Yoster', serif;
+    color: white;
+    font-size: 1.3em;
+    /* Makes the username larger */
+    font-weight: bold;
+    /* Optional: makes the username stand out more */
+    margin-bottom: 0;
+    /* Reduces space between the username and the role */
+}
+
+tbody {
+    font-family: 'basiic', serif;
+}
+
+.role {
+    font-family: 'basiic', serif;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.novice-adventurer {
+    animation: float 3s ease-in-out infinite;
+    color: #7c7c7c;
+    /* Grey for beginners */
+}
+
+.initiate-acolyte {
+    color: #7FDBFF;
+    animation: flicker 2s linear infinite;
+    /* Light blue for initiates */
+}
+
+.rookie-blacksmith {
+    color: #FFDC00;
+    animation: pulse 2s infinite;
+    /* Yellow for rookies */
+}
+
+.grandmaster-scholar {
+    background: linear-gradient(45deg, #B10DC9, #85144b, #B10DC9, #85144b);
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+
+.veteran-archer {
+    color: #2ECC40;
+    /* Green for veterans */
+    text-shadow: 0 0 5px #228B22;
+    /* Soft green glow */
+}
+
+@keyframes clash {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.veteran-archer::after {
+    content: '→';
+    animation: shoot-arrow .5s ease-out infinite;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.elite-knight {
+    color: #0074D9;
+    /* Blue for elites */
+    text-shadow: 0 0 7px #001f3f;
+    /* Strong blue glow */
+}
+
+.elite-knight::before {
+    content: '⚔️';
+    display: inline-block;
+    animation: clash 1s infinite;
+    margin-right: 3px;
+}
+
+.master-assassin {
+    color: #FF0000;
+    /* Bright red color for masters */
+    text-shadow: 0 0 7px #FF4500;
+    /* Complementary glow for initial state */
+    animation: pulsing-glow 1s infinite;
+    /* Applying the pulsing glow effect */
+}
+
+.journeyman-wizard {
+    color: #F012BE;
+    /* Magenta for grandmasters */
+    text-shadow: 0 0 12px #85144b;
+    /* Deep magenta glow */
+}
+
+.journeyman-wizard::before {
+    content: '✨';
+    position: absolute;
+    animation: sparkle 1.5s infinite;
+    margin-left: -20px;
+}
+
+.forum-master {
+    color: #FF4136;
+    /* Red for forum masters */
+    animation: glowing 1s infinite;
+    /* Stronger glow effect */
+}
+
+.navigation-buttons {
+    text-align: center;
+    padding: 10px 20px 0 20px;
+}
+
+.prev-button,
+.next-button {
+    background-color: #000033;
+    /* Dark blue color to match your theme */
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    /* Retro font from your theme */
+    font-size: 0.8em;
+    outline: none;
+    border: 1px solid #8F3E97;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #8F3E97;
+    /* Purple color for hover effect */
+}
+
+.prev-button:disabled,
+.next-button:disabled {
+    color: #666666;
+    cursor: not-allowed;
 }

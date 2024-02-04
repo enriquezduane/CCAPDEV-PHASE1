@@ -57,22 +57,6 @@ registerButton.addEventListener('click', function() {
     modal3.classList.remove('show');
 });
 
-
-// Accordion functions
-const accordionButton = document.querySelector('.accordion-button');
-const accordionContent = document.querySelector('.info-center-frame');
-
-accordionButton.addEventListener('click', function() {
-    this.classList.toggle('active');
-
-    // Check if the accordion is active to determine how to animate
-    if (this.classList.contains('active')) {
-        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
-    } else {
-        accordionContent.style.maxHeight = '0';
-    }
-});
-
 // music functions
 const soundButton = document.querySelector('.music-button');
 const soundEffect = document.querySelector('.sound-effect');
