@@ -132,6 +132,10 @@ header div {
     animation: spin 4s linear infinite;
 }
 
+.spin-img:active {
+    transform: translateY(2px);
+}
+
 .spin-img:hover {
     animation: spin;
 }
@@ -191,7 +195,7 @@ thead th {
 
 td {
     padding: 10px;
-    border: 1px solid #8F3E97; /* Purple color for borders */
+    border: 1px solid #c45aeb;
     text-align: left;
 }
 
@@ -207,7 +211,12 @@ tbody tr strong {
     color: white;
 }
 
-td[colspan="5"], td[colspan="4"], .info-center-frame div{
+td[colspan="5"], td[colspan="4"],
+.info-center-frame div,
+#registration-agreement,
+.registration-form header
+{
+    padding: 10px;
     font-family: Romance, serif;
     font-size: 30px;
     background-size: 50%;
@@ -250,12 +259,12 @@ td[colspan="5"], td[colspan="4"], .info-center-frame div{
 }
 
 .info-center-frame {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     transition: max-height 0.3s ease;
     max-height: 1000px; /* higher than actual height to allow accordion animation on first click */
-    border: 1px solid #8F3E97;
-    display: flex;
-    flex-direction: column;
+    border: 1px solid #c45aeb;
 }
 
 .info-center-frame p {
@@ -277,7 +286,7 @@ footer {
 }
 
 /* modal background */
-.modal {
+.modal, .modal2, .modal3 {
     visibility: hidden;
     position: fixed;
     z-index: 1;
@@ -292,19 +301,14 @@ footer {
     /* Updated to black with transparency */
 }
 
-.modal.show {
+.show {
     visibility: visible;
-    background-color: rgba(40, 64, 80, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     opacity: 1;
 }
 
 .modal-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.6);
     /* Slightly more opaque black */
     border-radius: 8px;
     border: 1px solid #c45aeb;
@@ -314,7 +318,14 @@ footer {
     /* Neon purplish-pink text */
     width: auto;
     max-width: 500px;
-    box-sizing: border-box;
+}
+
+.modal-container, .agreement-frame, .registration-form-frame {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-header {
@@ -465,4 +476,116 @@ footer {
 
 .modal-content span a {
     color: white;
+}
+
+.agreement-frame {
+    width: 750px;
+    border: 1px solid #00ff00; /* Neon green, reminiscent of old computer screens */
+    box-shadow: 0 0 10px #00ff00; /* Glowing effect */
+}
+
+.agreement-frame div {
+    background-color: rgba(00,00,33,0.7); /* Example body row background color */
+    padding: 10px;
+    text-align: center;
+}
+
+.agreement-frame p {
+    font-family: 'Romance', serif; /* Changing the font to 'Romance' */
+    padding: 15px;
+    text-align: justify;
+    line-height: 1.6em;
+}
+
+.agreement-frame div button {
+    font-family: 'Press Start 2P', cursive; /* Matches modal font for consistency */
+    background-color: #ff00ff; /* Bright retro magenta for the background */
+    color: #ffffff; /* White text for contrast */
+    padding: 5px 20px; /* Comfortable padding */
+    border: 2px solid #00ffff; /* Cyan border for that neon retro look */
+    border-radius: 5px; /* Slight rounding of corners */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s; /* Smooth transitions for interactions */
+}
+
+.agreement-frame div button:hover {
+    background-color: #ff1493; /* Darker magenta on hover/focus for a tactile feel */
+    color: #00ffff; /* Cyan text on hover/focus for contrast switch */
+}
+
+.agreement-frame div button:active {
+    transform: translateY(2px); /* Slight push effect on click */
+}
+
+.registration-form-frame {
+    width: 450px;
+    border: 1px solid #00ff00; /* Neon green, reminiscent of old computer screens */
+    box-shadow: 0 0 10px #00ff00; /* Glowing effect */
+}
+
+.registration-form {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+}
+
+.registration-form header {
+    border-bottom: 1px solid #ff00ff;
+}
+
+.register_form dt {
+    margin-bottom: 10px; /* Spacing between label and input */
+}
+
+.register_form input {
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    background-color: #000; /* Black backgrounds for inputs */
+    border: 2px solid #ff00ff; /* Magenta border for inputs */
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 0 10px #ff00ff inset; /* Inner glow for focus */
+}
+
+.register_form input:focus {
+    border-color: #ffff00; /* Bright yellow on focus */
+    box-shadow: 0 0 10px #ffff00 inset;
+    outline: none; /* Removes the default focus outline */
+    transition: 0.5s;
+    color: #fff;
+}
+
+.registration-form fieldset {
+    background-color: rgba(0,0,0,0.7);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+}
+
+.registration-form fieldset dl {
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.button-area {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.button-area button {
+    padding: 10px;
+    background-color: #00ff00; /* Bright neon green */
+    color: #000; /* Black text for contrast */
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-area button:hover {
+    background-color: #ff00ff; /* Magenta for hover */
+    color: #fff; /* White text for readability */
 }

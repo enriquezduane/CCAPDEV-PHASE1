@@ -1,6 +1,8 @@
 // modal functions
+
+// modal for login
 const modal = document.querySelector('.modal');
-const openModalButton = document.querySelector('#login'); // Adjust this selector to target your open button
+const openModalButton = document.querySelector('#login');
 const closeModalButton = document.querySelector('.close-btn');
 
 openModalButton.addEventListener('click', function() {
@@ -11,11 +13,48 @@ closeModalButton.addEventListener('click', function() {
     modal.classList.remove('show');
 });
 
-// Optional: Close modal on window click
+// Close modal on window click
 window.addEventListener('click', function(event) {
     if (event.target === modal) {
         modal.classList.remove('show');
     }
+});
+
+// registration agreement modal
+const modal2 = document.querySelector('.modal2');
+const openModalButton2 = document.querySelector('#register');
+
+openModalButton2.addEventListener('click', function() {
+    modal2.classList.add('show');
+});
+
+// Close modal2 on window click
+window.addEventListener('click', function(event) {
+    if (event.target === modal2) {
+        modal2.classList.remove('show');
+    }
+});
+
+// registration form modal
+const modal3 = document.querySelector('.modal3');
+const agreeButton = document.querySelector('.agree-button');
+
+agreeButton.addEventListener('click', function() {
+   modal3.classList.add('show');
+   modal2.classList.remove('show');
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === modal3) {
+        modal3.classList.remove('show');
+    }
+});
+
+const registerButton = document.querySelector('#register-button');
+
+registerButton.addEventListener('click', function() {
+    alert("You have successfully registered!");
+    modal3.classList.remove('show');
 });
 
 
@@ -35,7 +74,6 @@ accordionButton.addEventListener('click', function() {
 });
 
 // music functions
-
 const soundButton = document.querySelector('.music-button');
 const soundEffect = document.querySelector('.sound-effect');
 let isPlaying = false;
