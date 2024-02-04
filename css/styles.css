@@ -149,10 +149,11 @@ header img{
     margin-right: 10px;
 }
 
-.ragnarok-logo-frame {
+.ragnarok-logo-frame a{
     justify-content: center;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 #logo {
