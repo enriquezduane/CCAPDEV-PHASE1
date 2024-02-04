@@ -56,7 +56,7 @@ a:hover {
 
 .shade {
     background-image: url('/images/snow.gif');
-    background-size: 250px;
+    background-size: 100px;
     opacity: 0.7;
     z-index: -1;
     height: 100%;
@@ -68,9 +68,9 @@ a:hover {
 
 .shade-2 {
     background-image: url('/images/winter-clouds.png');
-    background-size: 100%;
+    background-size: 50%;
     opacity: 0.8;
-    z-index: -1;
+    z-index: -2;
     height: 100%;
     left: 0;
     top: 0;
@@ -82,7 +82,18 @@ a:hover {
 .shade-3 {
     background-image: url('/images/starsky.gif');
     opacity: 0.4;
-    z-index: -1;
+    z-index: -3;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.shade-4 {
+    background-image: url('/images/pixel-city.gif');
+    opacity: 1;
+    z-index: -5;
     height: 100%;
     left: 0;
     top: 0;
@@ -107,18 +118,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 15px;
 }
 
 header div {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 15px;
-    margin-right: 15px;
 }
 
 .spin-img {
-    animation: spin 5s linear infinite;
+    animation: spin 4s linear infinite;
 }
 
 .spin-img:hover {
@@ -161,28 +171,9 @@ header img{
     padding: 15px 15px;
 }
 
-.inner-border {
-    border: solid 1px #ffff1a;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
-}
-
-.post-logo {
-    text-align: center;
-}
-
-table {
-    table-layout: fixed;
-    width: 100%; /* or whatever width you want for your table */
-}
-
-td {
-    border: 1px solid #ffff1a; /* Example border color */
-    padding: 8px;
-    text-align: left;
 }
 
 thead {
@@ -194,6 +185,22 @@ thead {
 thead th {
     text-align: center;
     vertical-align: middle;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #8F3E97; /* Purple color for borders */
+    text-align: left;
+}
+
+.post-logo {
+    text-align: center;
+}
+
+.post-logo img {
+    transform: scale(1.5); /* Adjust scale as needed */
+    width: 40px; /* Adjust or remove width and height if using scale */
+    height: 40px; /* Adjust or remove width and height if using scale */
 }
 
 tbody tr {
@@ -226,30 +233,31 @@ td[colspan="5"], td[colspan="4"] {
     justify-content: space-between;
 }
 
-.info-center-table {
-    max-height: 0;
+.info-center-content {
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.3s ease;
+    max-height: 1000px; /* higher than actual height to allow accordion animation on first click */
 }
 
 .accordion-button {
     border-radius: 4px; /* Rounded corners */
-    transition: 0.5s ease; /* Transition effect for background color */
+    transition: 0.5s linear; /* Transition effect for background color */
     margin-right: 10px;
+    background-color: rgba(103, 89, 89, 0.3);
 }
 
 .accordion-button:after {
     font-size: 15px;
-    content: '\2796';
+    content: '\02795';
 }
 
 
-.active, .accordion-button:hover {
-    background-color: rgba(103, 89, 89, 0.3);
+.accordion-button.active {
+    background-color: rgb(255, 255, 255);
 }
 
 .active:after {
-    content: '\02795';
+    content: '\2796';
 }
 
 footer {
@@ -268,21 +276,22 @@ footer {
 /* modal background */
 .modal {
     visibility: hidden;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0); /* Transparent color and opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0);
     opacity: 0;
-    transition: 0.5s ease;
+    transition: background-color 1s ease;
+    /* Updated to black with transparency */
 }
 
 .modal.show {
     visibility: visible;
-    background-color: rgba(40, 64, 80, 0.6);
+    background-color: rgba(40, 64, 80, 0.7);
     opacity: 1;
 }
 
@@ -291,54 +300,166 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #313131; /* Dark background color */
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Slightly more opaque black */
     border-radius: 8px;
-    border: 1px solid #f0f0f0; /* Light border */
-    box-shadow: 0 0 10px rgba(240, 240, 240, 0.3); /* Light box shadow */
+    border: 1px solid #c45aeb;
+    /* Neon purplish-pink border */
     font-family: 'Press Start 2P', cursive;
+    color: white;
+    /* Neon purplish-pink text */
+    width: auto;
+    max-width: 500px;
+    box-sizing: border-box;
 }
 
 .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+}
+
+.modal h2 {
+    margin: 0;
+    flex-grow: 1;
+    color: white;
+    /* Neon purplish-pink text color */
+    text-shadow:
+            0 0 5px #f975f7,
+                /* Lighter neon purplish-pink glow */
+            0 0 10px #c45aeb,
+                /* Neon purplish-pink glow */
+            0 0 20px #c45aeb;
+    /* Enhanced neon glow for depth */
+    font-family: 'Press Start 2P', cursive;
+    /* Ensure font consistency */
 }
 
 .modal-content {
-    text-align: center;
-    border: 1px solid #f0f0f0; /* Light border */
-    box-shadow: 0 0 10px rgba(240, 240, 240, 0.3); /* Light box shadow */
-    border-radius: 4px; /* Adjust border radius if needed */
-    padding: 10px; /* Adjust padding as needed */
+    padding: 20px;
+    border: 1px solid #c45aeb;
+    /* Neon purplish-pink border */
+    text-align: left;
 }
 
-
-label, input, button {
-    margin: 10px 0;
-}
-
-input, button {
-    padding: 5px;
-    border: 1px solid #f0f0f0; /* Light border */
-    background-color: #313131; /* Dark background color */
-    color: #f0f0f0; /* Light text color */
-    font-family: 'Press Start 2P', cursive;
-}
-
-.close-btn {
+.modal .close-btn {
+    font-family: "Press Start 2P", serif;
+    /* Ensures font consistency with the Login text */
+    font-size: 20px;
+    /* Size of the X button */
+    color: white;
+    /* Sets the initial color to white, matching the Login text */
+    cursor: pointer;
+    background-color: transparent;
     border: none;
-    font-size: 18px;
-    color: #f0f0f0; /* Light text color */
+    outline: none;
+    text-shadow:
+            0 0 5px #f975f7,
+                /* Lighter neon purplish-pink glow */
+            0 0 10px #c45aeb,
+                /* Neon purplish-pink glow */
+            0 0 20px #c45aeb;
+    /* Enhanced neon glow for depth */
 }
 
-.modal-content hr {
-    border: 1px solid;
-    margin: 20px 5px;
+.modal .close-btn:hover, .modal .close-btn:focus {
+    color: #f975f7;
+    /* Changes color on hover/focus to a lighter neon purplish-pink */
+    text-shadow:
+            0 0 8px #f975f7,
+            0 0 12px #c45aeb,
+            0 0 24px #c45aeb;
+    /* Intensifies the neon glow effect on hover/focus */
+    transform: scale(1.15);
+    /* Scales up slightly for visual feedback */
+}
+
+.modal button[type="submit"] {
+    font-family: "Press Start 2P", serif;
+    background-color: #9932cc;
+    /* Reinstated base color for the button */
+    color: #f0f0f0;
+    /* Maintaining light text for contrast */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #c45aeb;
+    /* Pinkish border without glow */
+    border-radius: 4px;
+    box-shadow: none;
+    /* Remove glow effect */
+    transition: background-color 0.2s, border-color 0.2s;
+    /* Smooth transition for color and border */
+    cursor: pointer;
+}
+
+.modal button[type="submit"]:hover {
+    background-color: #da70d6;
+    /* Lighter purple on hover */
+    border-color: #f975f7;
+    /* Lighter pinkish border on hover */
+}
+
+
+.modal input {
+    width: calc(100% - 10px);
+    font-family: 'Press Start 2P', serif;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    background-color: #121212;
+    /* Dark background for inputs */
+    color: white;
+    /* Changes text color to white */
+    border: 1px solid #c45aeb;
+    /* Neon border */
+}
+
+.modal input::placeholder {
+    color: #ccc;
+    /* Lighter color for placeholder text */
+}
+
+.modal input, .modal button {
+    width: calc(100% - 10px);
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    background-color: #121212;
+    /* Neon purplish-pink text */
+    border: 1px solid #c45aeb;
+    /* Neon border */
+}
+
+.modal input:focus, .modal button:focus {
+    border-color: #f975f7;
+    /* Lighter neon for focus */
+    box-shadow: 0 0 5px #f975f7, 0 0 10px #f975f7;
+    /* Focus glow effect */
+}
+
+.modal a {
+    color: #c45aeb;
+    /* Neon purplish-pink links */
+}
+
+.modal a:hover {
+    color: #f975f7;
+    /* Lighter neon purplish-pink on hover */
+    text-decoration: none;
 }
 
 .modal-content span {
+    color: #c45aeb;
+    /* Neon purplish-pink text for "Don't have an account?" */
     text-align: center;
-    margin: 20px;
+    /* Centering the text */
+    display: block;
+    /* Ensures it is centered by taking the full width */
+}
+
+.modal-content span a {
+    color: white;
 }
