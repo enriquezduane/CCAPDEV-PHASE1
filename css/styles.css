@@ -1,32 +1,32 @@
 @font-face {
     font-family: Banquise;
-    src: url('/fonts/Banquise-Regular.woff') format('woff');
+    src: url('../fonts/Banquise-Regular.woff') format('woff');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'basiic';
-    src: url('/fonts/basiic.ttf') format('truetype');
+    src: url('../fonts/basiic.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Romance';
-    src: url('/fonts/RomanceA.ttf') format('truetype');
+    src: url('../fonts/RomanceA.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Webfont';
-    src: url('/fonts/000webfont.ttf') format('truetype');
+    src: url('../fonts/000webfont.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Yoster';
-    src: url('/fonts/yoster.ttf') format('truetype');
+    src: url('../fonts/yoster.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Heart';
-    src: url('/fonts/heartfont.ttf') format('truetype');
+    src: url('../fonts/heartfont.ttf') format('truetype');
 }
 
 * {
@@ -42,6 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'basiic', serif;
 }
 
 .dashed-black-container {
@@ -71,7 +72,7 @@ a:hover {
 }
 
 .shade {
-    background-image: url('/images/snow.gif');
+    background-image: url('../images/snow.gif');
     background-size: 100px;
     opacity: 0.7;
     z-index: -1;
@@ -83,7 +84,7 @@ a:hover {
 }
 
 .shade-2 {
-    background-image: url('/images/winter-clouds.png');
+    background-image: url('../images/winter-clouds.png');
     background-size: 50%;
     opacity: 0.8;
     z-index: -2;
@@ -96,7 +97,7 @@ a:hover {
 }
 
 .shade-3 {
-    background-image: url('/images/starsky.gif');
+    background-image: url('../images/starsky.gif');
     opacity: 0.4;
     z-index: -3;
     height: 100%;
@@ -107,7 +108,7 @@ a:hover {
 }
 
 .shade-4 {
-    background-image: url('/images/pixel-city.gif');
+    background-image: url('../images/pixel-city.gif');
     opacity: 1;
     z-index: -5;
     height: 100%;
@@ -118,7 +119,7 @@ a:hover {
 }
 
 .top-shade {
-    background-image: url('/images/stars.gif');
+    background-image: url('../images/stars.gif');
     background-size: 300px;
     float: left;
     height: 100px;
@@ -230,7 +231,8 @@ tbody tr strong {
 td[colspan="5"], td[colspan="4"],
 .info-center-frame div,
 #registration-agreement,
-.registration-form header
+.registration-form header,
+.topic-header
 {
     padding: 10px;
     font-family: Romance, serif;
@@ -238,7 +240,7 @@ td[colspan="5"], td[colspan="4"],
     background-size: 50%;
     background-image:
             linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)),
-            url('/images/retro-pizza.gif');
+            url('../images/retro-pizza.gif');
     background-blend-mode: screen;
     color: white;
     text-align: left;
@@ -907,7 +909,9 @@ tbody {
 }
 
 .prev-button,
-.next-button {
+.next-button,
+.reply-button,
+.post-button {
     background-color: #000033;
     /* Dark blue color to match your theme */
     color: #ffffff;
@@ -920,10 +924,14 @@ tbody {
     font-size: 0.8em;
     outline: none;
     border: 1px solid #8F3E97;
+    transition: 0s;
 }
 
 .prev-button:hover,
-.next-button:hover {
+.next-button:hover,
+.reply-button:hover,
+.post-button:hover {
+    color: #ffffff;
     background-color: #8F3E97;
     /* Purple color for hover effect */
 }
@@ -932,4 +940,97 @@ tbody {
 .next-button:disabled {
     color: #666666;
     cursor: not-allowed;
+}
+
+.post-container-template {
+    background-color: #000033;
+    border: 1px transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light box shadow */
+    margin-bottom: 20px;
+}
+
+.title-header {
+    margin-bottom: 20px;
+}
+
+.title-header p {
+    padding: 10px;
+}
+
+.post-section-top, .reply-section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.left-side-buttons .prev-button{
+    margin-left: 20px;
+}
+
+.post-section {
+    display: flex;
+    padding: 10px;
+}
+
+.poster-info {
+    width: 15%;
+    padding: 5px;
+}
+
+.poster-info div {
+    margin-bottom: 5px;
+}
+
+.poster-name a{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.poster-role {
+    font-size: 17px;
+}
+
+.poster-join-date {
+    font-size: 14px;
+}
+
+.poster-posts {
+    font-size: 14px;
+}
+
+.post-area {
+    width: 90%;
+}
+
+.post-info {
+    border-bottom: 1px solid;
+}
+
+.post-name, .post-date {
+    margin-bottom: 5px;
+}
+
+.post-content {
+    line-height: 1.5rem;
+    padding: 10px 10px 10px 0;
+}
+
+.reply-area {
+    padding: 10px 100px;
+    text-align: center;
+}
+
+#reply-box {
+    width: 500px;
+    height: 150px;
+    max-height: 400px;
+    flex-basis: 150px;
+    resize: vertical;
+    padding: 5px;
+    border: 1px transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light box shadow */
+    margin-bottom: 10px;
 }
