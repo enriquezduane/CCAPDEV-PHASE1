@@ -975,7 +975,7 @@ tbody {
 }
 
 .poster-info {
-    width: 15%;
+    width: 20%;
     padding: 5px;
 }
 
@@ -983,9 +983,10 @@ tbody {
     margin-bottom: 5px;
 }
 
-.poster-name a{
+.poster-name a {
     text-decoration: none;
     font-size: 25px;
+    font-family: 'Yoster', serif;
 }
 
 .poster-role {
@@ -1009,7 +1010,7 @@ tbody {
 }
 
 .post-name, .post-date {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .post-content {
@@ -1028,9 +1029,60 @@ tbody {
     max-height: 400px;
     flex-basis: 150px;
     resize: vertical;
-    padding: 5px;
-    border: 1px transparent;
+    padding: 10px;
+    background: #1c1a1a;
+    border: 1px solid #bb00bb;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light box shadow */
+    color: white;
+    font-family: 'basiic', serif;
+    font-size: 15px;
+    box-shadow:
+            0 0 4px rgba(187, 0, 187, 1),
+            inset 0 0 4px rgba(0, 187, 0, 0.5);
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+#reply-box:focus {
+    box-shadow:
+            0 0 6px rgba(187, 0, 187, 0.7),
+            inset 0 0 6px rgba(0, 187, 0, 0.5);
+    border-color: #009999;
+}
+
+.profile-container {
+}
+
+.profile-area {
+    font-size: 25px;
+    display: flex;
+    padding: 25px 250px;
+}
+
+.profile-left {
+    width: 30%;
+    padding: 5px;
+}
+
+.profile-name {
+    color: #fff;
+    font-size: 35px;
     margin-bottom: 10px;
+}
+
+.profile-right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-info dt{
+    margin-bottom: 5px;
 }
