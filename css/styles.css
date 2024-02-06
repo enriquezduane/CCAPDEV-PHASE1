@@ -795,7 +795,7 @@ footer {
     /* Reduces space between the username and the role */
 }
 
-.username a {
+.username a, .post-title a, .post-section a {
     text-decoration: none;
 }
 
