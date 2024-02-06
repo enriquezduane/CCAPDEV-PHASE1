@@ -197,6 +197,7 @@ header img{
 table {
     width: 100%;
     border-collapse: collapse;
+
 }
 
 thead {
@@ -219,10 +220,13 @@ td {
 .post-logo {
     text-align: center;
 }
-tbody tr, .info-center-frame p{
+.boards-header, .topics th, tbody tr, .info-center-frame p{
     background-color: #000033; /* Example body row background color */
     color: #abb2bf; /* Example body row text color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light box shadow */
 }
+
+
 
 td[colspan="5"], td[colspan="4"],
 .info-center-frame div,
@@ -279,6 +283,7 @@ td[colspan="5"], td[colspan="4"],
     transition: max-height 0.3s ease;
     max-height: 1000px; /* higher than actual height to allow accordion animation on first click */
     border: 1px solid #c45aeb;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light box shadow */
 }
 
 .info-center-frame p {
