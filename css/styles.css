@@ -224,10 +224,6 @@ tbody tr, .info-center-frame p{
     color: #abb2bf; /* Example body row text color */
 }
 
-tbody tr strong {
-    color: white;
-}
-
 td[colspan="5"], td[colspan="4"],
 .info-center-frame div,
 #registration-agreement,
@@ -1085,4 +1081,20 @@ tbody {
 
 .profile-info dt{
     margin-bottom: 5px;
+}
+
+.terms-container {
+    text-align: center;
+}
+
+.terms-area {
+    font-family: 'basiic', serif;
+    padding: 20px;
+    line-height: 1.6rem;
+    text-align: justify;
+}
+
+.terms-container img {
+    width: 500px;
+    height: 500px;
 }
