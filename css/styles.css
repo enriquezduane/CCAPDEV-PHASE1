@@ -1023,6 +1023,10 @@ tbody {
     padding: 10px 10px 10px 0;
 }
 
+.post-content strong {
+    color: #FFF;
+}
+
 .reply-area {
     padding: 10px 100px;
     text-align: center;
@@ -1057,6 +1061,7 @@ tbody {
 }
 
 .profile-container {
+    margin: 0px;
 }
 
 .profile-area {
@@ -1066,7 +1071,7 @@ tbody {
 }
 
 .profile-left {
-    width: 30%;
+    width: 40%;
     padding: 5px;
 }
 
@@ -1074,10 +1079,11 @@ tbody {
     color: #fff;
     font-size: 35px;
     margin-bottom: 10px;
+    font-family: 'Yoster', serif;
 }
 
 .profile-right {
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
