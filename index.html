@@ -22,7 +22,7 @@
         </div>
         <nav class="navbar">
             <a href="index.html">
-                <img  alt="search" src="images/home.gif">
+                <img  alt="home" src="images/home.gif">
             </a>
             <a id="register" href="#">
                 <img  alt="register" src="images/register.gif">
@@ -30,7 +30,7 @@
             <a id="login" href="#">
                 <img alt="register" src="images/login.gif">
             </a>
-            <a href="#">
+            <a id="search" href="#">
                 <img alt="search" src="images/search.gif">
             </a>
         </nav>
@@ -245,12 +245,10 @@
                     Users Online
                 </div>
                 <p>
-                    <a href="#">
-                        Online: 10 Guests, 1 User
-                    </a>
+                    <Strong>Online: 10 Guests, 1 User</Strong>
                     - Most Online Today: <strong>16</strong> -  Most Online Ever: 34 (Feb 01, 2024, 09:23 PM)
                     <br>
-                    Users active in past 15 minutes: <a href="#">lokitrickster</a>
+                    Users active in past 15 minutes: <a href="profile-1.html">lokitrickster</a>
                 </p>
             </div>
         </div>
@@ -352,6 +350,21 @@
                 </fieldset>
             </form>
         </div>
+    </div>
+
+    <div class="modal4">
+        <div class="search-container">
+            <div class="search-header">
+                Search for Posts
+            </div>
+            <div class="search-box">
+                <form action ="/search-results.html">
+                    <input type="text" name="query" class="search-input" placeholder="Search...">
+                    <button class="search-button" type="submit">Search</button>
+                </form>
+            </div>
+            <p>e.g. Orwell "Animal Farm" -movie</p>
+          </div>
     </div>
 
     <script src="js/main.js"></script>

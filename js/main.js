@@ -50,12 +50,33 @@ window.addEventListener('click', function(event) {
     }
 });
 
+// registration form submit
 const registerButton = document.querySelector('#register-button');
 
 registerButton.addEventListener('click', function() {
     alert("You have successfully registered!");
     modal3.classList.remove('show');
 });
+
+// search bar modal
+const modal4 = document.querySelector('.modal4');
+const openModalButton3 = document.querySelector('#search');
+const searchButton = document.querySelector('.search-button');
+
+openModalButton3.addEventListener('click', function() {
+    modal4.classList.add('show');
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === modal4) {
+        modal4.classList.remove('show');
+    }
+});
+
+searchButton.addEventListener('click', function() {
+    modal4.classList.remove('show');
+});
+
 
 // music functions
 const soundButton = document.querySelector('.music-button');

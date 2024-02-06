@@ -306,7 +306,7 @@ footer {
 }
 
 /* modal background */
-.modal, .modal2, .modal3 {
+.modal, .modal2, .modal3, .modal4 {
     visibility: hidden;
     position: fixed;
     z-index: 1;
@@ -340,7 +340,7 @@ footer {
     max-width: 500px;
 }
 
-.modal-container, .agreement-frame, .registration-form-frame {
+.modal-container, .agreement-frame, .registration-form-frame, .search-container{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1024,7 +1024,7 @@ tbody {
 }
 
 .post-content strong {
-    color: #FFF;
+    color: #FFF;    
 }
 
 .reply-area {
@@ -1112,4 +1112,71 @@ tbody {
 .terms-container img {
     width: 500px;
     height: 500px;
+}
+
+.search-container {
+    opacity: 1;
+    background-color: #222;
+    border: 1px solid #666;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Light box shadow */
+    border-radius: 5px;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search-container .search-header {
+    background-color: #222;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    padding: 20px 0px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    align-items: center;
+  }
+
+.search-input {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+    padding: 5px;
+    width: 250px;
+}
+
+.search-button {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-box + p {
+    font-size: 18px;
+}
+
+.search-result-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.search-result-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.search-result-container p {
+    font-size: 16px;
 }

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexusHub</title>
+    <title>Search Results</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <script src="js/app.js" defer></script>
 </head>
+
 <body>
     <div class="shade"></div>
     <div class="shade-2"></div>
@@ -22,15 +24,15 @@
         </div>
         <nav class="navbar">
             <a href="index.html">
-                <img  alt="search" src="images/home.gif">
+                <img alt="home" src="images/home.gif">
             </a>
-            <a id="register" href="#">
-                <img  alt="register" src="images/register.gif">
+            <a id="register"  href="#">
+                <img alt="register" src="images/register.gif">
             </a>
             <a id="login" href="#">
-                <img alt="register" src="images/login.gif">
+                <img alt="login" src="images/login.gif">
             </a>
-            <a href="#">
+            <a id="search" href="#">
                 <img alt="search" src="images/search.gif">
             </a>
         </nav>
@@ -52,55 +54,28 @@
                 </a>
             </div>
         </div>
+
         <div class="content-container dashed-black-container container-margin">
-            <div class="terms-container post-container-template">
-                <div class="terms-header topic-header">
-                    Terms and Conditions
+            <div class="title-header post-container-template topic-header">
+                Search Results
+            </div>
+            <div class="post-section-top">
+                <div class="left-side-buttons">
+                    <a href="#bot" id="top">Go Down</a>
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
                 </div>
-                <p class="terms-area">
-                    <strong style="color: white;">Terms and Conditions of Use for NexusHub</strong>
-                    <br><br>
-                    Welcome to NexusHub, the premier Ragnarok forum where enthusiasts, gamers, and fans come together to share,
-                    explore, and discuss everything related to Ragnarok. By accessing NexusHub, you agree to be bound by these
-                    Terms and Conditions of Use (the "Terms"), all applicable laws and regulations, and agree that you are
-                    responsible for compliance with any applicable local laws. If you do not agree with any of these terms,
-                    you are prohibited from using or accessing this site.
-                    <br><br>
-                    1. User Conduct and Responsibilities: You agree to use NexusHub only for lawful purposes and in a way
-                    that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of NexusHub.
-                    Prohibited behavior includes harassing or causing distress or inconvenience to any other user, transmitting
-                    obscene or offensive content, or disrupting the normal flow of dialogue within NexusHub. You must not use
-                    the forum to send unsolicited commercial communications or for any purposes related to marketing without
-                    our express written consent.
-                    <br><br>
-                    2. Content Ownership and Copyright: The content posted on NexusHub by its users, including text posts,
-                    threads, comments, and images, remains the intellectual property of the individuals who have posted them.
-                    By posting content on NexusHub, you grant us a non-exclusive, transferable, sub-licensable, royalty-free,
-                    worldwide license to use, reproduce, modify, adapt, publish, translate, create derivative works from,
-                    distribute, and display such content in connection with the service provided by the forum.
-                    <br><br>
-                    3. Disclaimers and Limitation of Liability: The information and content on NexusHub are provided "as is"
-                    without any representations or warranties, express or implied. NexusHub makes no representations or
-                    warranties in relation to this website or the information and materials provided. While we aim to ensure
-                    the information on NexusHub is correct, we do not warrant its completeness or accuracy; nor do we commit
-                    to ensuring that the website remains available or that the material on the website is kept up to date.
-                    To the fullest extent permitted by law, NexusHub will not be liable for any direct, indirect, special,
-                    or consequential loss or damage arising out of the use or inability to use NexusHub, even if NexusHub
-                    or an authorized representative has been notified orally or in writing of the possibility of such damage.
-                    <br><br>
-                    4. Modifications to Terms of Service: NexusHub reserves the right to revise these Terms at any time
-                    without notice. By using this website, you are agreeing to be bound by the then-current version of
-                    these Terms and Conditions of Use.
-                    <br><br>
-                    5. Governing Law: Any claim relating to NexusHub shall be governed by the laws of the forum's operating
-                    country without regard to its conflict of law provisions. General Terms and Conditions applicable to Use
-                    of a Website.
-                    <br><br>
-                    6. User Agreement: By accepting these Terms, you confirm that you understand and agree to comply with
-                    the rules and regulations set forth in this document. You acknowledge that these terms constitute a
-                    binding agreement between you and NexusHub that governs your use of the forum.
-                </p>
-                <img src="images/thank-you.gif" alt="thank you gif" />
+                <div class="right-side-buttons">
+                    <a href="#bot" class="reply-button" style="text-decoration: none;">Reply</a>
+                </div>
+            </div>
+
+            <div class="reply-section-top">
+                <div class="left-side-buttons">
+                    <a href="#top" id="bot">Go Up</a>
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
+                </div>
             </div>
         </div>
     </main>
@@ -113,7 +88,7 @@
 
     <div class="bottom-footer">
         <a href="#">
-            <img alt ="ragnarok logo" src="images/ragnaroklogo.png" style="scale: 0.6;">
+            <img alt="ragnarok logo" src="images/ragnaroklogo.png" style="scale: 0.6;">
         </a>
     </div>
 
@@ -133,8 +108,8 @@
                 </form>
                 <br style="padding-top: 100px;">
                 <span>Don't have an account?<br><br>
-                        <a href="#">Sign up</a>
-                    </span>
+            <a href="#">Sign up</a>
+            </span>
             </div>
         </div>
     </div>
@@ -216,9 +191,11 @@
                 </form>
             </div>
             <p>e.g. Orwell "Animal Farm" -movie</p>
-        </div>
+          </div>
     </div>
 
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>  
+    <script src="js/searchPost.js"></script>
 </body>
+
 </html>

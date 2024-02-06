@@ -2,9 +2,7 @@
 const postButton = document.querySelector('.post-button');
 postButton.addEventListener('click', function() {
     const replyContent = document.querySelector('#reply-box').value;
-
-
-
+    
     // validate the reply
     if (replyContent.trim() === '') {
         alert('Please enter some text before submitting.');
