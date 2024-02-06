@@ -795,6 +795,10 @@ footer {
     /* Reduces space between the username and the role */
 }
 
+.username a {
+    text-decoration: none;
+}
+
 tbody {
     font-family: 'basiic', serif;
 }
