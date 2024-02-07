@@ -1,773 +1,823 @@
 @font-face {
-    font-family: Banquise;
-    src: url('../fonts/Banquise-Regular.woff') format('woff');
-    font-style: normal;
+  font-family: Banquise;
+  src: url('../fonts/Banquise-Regular.woff') format('woff');
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'basiic';
-    src: url('../fonts/basiic.ttf') format('truetype');
+  font-family: 'basiic';
+  src: url('../fonts/basiic.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Romance';
-    src: url('../fonts/RomanceA.ttf') format('truetype');
+  font-family: 'Romance';
+  src: url('../fonts/RomanceA.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Webfont';
-    src: url('../fonts/000webfont.ttf') format('truetype');
+  font-family: 'Webfont';
+  src: url('../fonts/000webfont.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Yoster';
-    src: url('../fonts/yoster.ttf') format('truetype');
+  font-family: 'Yoster';
+  src: url('../fonts/yoster.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Heart';
-    src: url('../fonts/heartfont.ttf') format('truetype');
+  font-family: 'Heart';
+  src: url('../fonts/heartfont.ttf') format('truetype');
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scrollbar-color: #6040b1 #0b0618;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-color: #6040b1 #0b0618;
 }
 
 body {
-    background-color: #006;
-    color: #abb2bf;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'basiic', serif;
+  background-color: #006;
+  color: #abb2bf;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'basiic', serif;
 }
 
 .dashed-black-container {
-    border: 1px solid #f0f0f0; /* Light border */
-    box-shadow: 0 0 10px rgba(240, 240, 240, 0.3); /* Light box shadow */
-    border-radius: 8px;
-    background-color: black;
+  border: 1px solid #f0f0f0;
+  /* Light border */
+  box-shadow: 0 0 10px rgba(240, 240, 240, 0.3);
+  /* Light box shadow */
+  border-radius: 8px;
+  background-color: black;
 }
 
 .container-margin {
-    margin: 20px 200px;
+  margin: 20px 200px;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a {
-    color: white;
-    transition: 0.5s;
+  color: white;
+  transition: 0.5s;
 }
 
 a:hover {
-    background-color: transparent;
-    color: #ff9200;
-    text-decoration: none;
+  background-color: transparent;
+  color: #ff9200;
+  text-decoration: none;
 }
 
 .shade {
-    background-image: url('../images/snow.gif');
-    background-size: 100px;
-    opacity: 0.7;
-    z-index: -1;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: fixed;
-    width: 100%;
+  background-image: url('../images/snow.gif');
+  background-size: 100px;
+  opacity: 0.7;
+  z-index: -1;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .shade-2 {
-    background-image: url('../images/winter-clouds.png');
-    background-size: 50%;
-    opacity: 0.8;
-    z-index: -2;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    float: left;
+  background-image: url('../images/winter-clouds.png');
+  background-size: 50%;
+  opacity: 0.8;
+  z-index: -2;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  float: left;
 }
 
 .shade-3 {
-    background-image: url('../images/starsky.gif');
-    opacity: 0.4;
-    z-index: -3;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: fixed;
-    width: 100%;
+  background-image: url('../images/starsky.gif');
+  opacity: 0.4;
+  z-index: -3;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .shade-4 {
-    background-image: url('../images/pixel-city.gif');
-    opacity: 1;
-    z-index: -5;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: fixed;
-    width: 100%;
+  background-image: url('../images/pixel-city.gif');
+  opacity: 1;
+  z-index: -5;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .top-shade {
-    background-image: url('../images/stars.gif');
-    background-size: 300px;
-    float: left;
-    height: 100px;
-    left: 0;
-    opacity: 1;
-    position: absolute;
-    top: 7px;
-    width: 100%;
-    z-index: -1;
+  background-image: url('../images/stars.gif');
+  background-size: 300px;
+  float: left;
+  height: 100px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  z-index: -1;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 15px;
-    margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+  margin-top: 15px;
 }
 
 header div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .spin-img {
-    animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
 }
 
 .spin-img:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .spin-img:hover {
-    animation: spin;
+  animation: spin;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-header img{
-    margin-left: 10px;
-    margin-right: 10px;
+header img {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.ragnarok-logo-frame a{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+.ragnarok-logo-frame a {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 #logo {
-    font-family: Banquise, serif;
-    font-size: 100px;
-    color: #FFF;
-    text-shadow:
-            0 0 5px #33CCFF,
-            0 0 10px #00BFFF,
-            0 0 20px #1E90FF,
-            0 0 40px #0000FF;
-    margin-left: 20px;
+  font-family: Banquise, serif;
+  font-size: 100px;
+  color: #FFF;
+  text-shadow:
+    0 0 5px #33CCFF,
+    0 0 10px #00BFFF,
+    0 0 20px #1E90FF,
+    0 0 40px #0000FF;
+  margin-left: 20px;
 }
 
 .content-container {
-    padding: 15px 15px;
+  padding: 15px 15px;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 
 }
 
 thead {
-    font-family: Romance, serif;
-    font-size: 30px;
-    color: white;
+  font-family: Romance, serif;
+  font-size: 30px;
+  color: white;
 }
 
 thead th {
-    text-align: center;
-    vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
 }
 
 td {
-    padding: 10px;
-    border: 1px solid #c45aeb;
-    text-align: left;
+  padding: 10px;
+  border: 1px solid #c45aeb;
+  text-align: left;
 }
 
 .post-logo {
-    text-align: center;
-}
-.boards-header, .topics th, tbody tr, .info-center-frame p{
-    background-color: #000033; /* Example body row background color */
-    color: #abb2bf; /* Example body row text color */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light box shadow */
+  text-align: center;
 }
 
+.boards-header,
+.topics th,
+tbody tr,
+.info-center-frame p {
+  background-color: #000033;
+  /* Example body row background color */
+  color: #abb2bf;
+  /* Example body row text color */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  /* Light box shadow */
+}
 
 
-td[colspan="5"], td[colspan="4"],
+
+td[colspan="5"],
+td[colspan="4"],
 .info-center-frame div,
 #registration-agreement,
 .registration-form header,
-.topic-header
-{
-    padding: 10px;
-    font-family: Romance, serif;
-    font-size: 30px;
-    background-size: 50%;
-    background-image:
-            linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)),
-            url('../images/retro-pizza.gif');
-    background-blend-mode: screen;
-    color: white;
-    text-align: left;
+.topic-header {
+  padding: 10px;
+  font-family: Romance, serif;
+  font-size: 30px;
+  background-size: 50%;
+  background-image:
+    linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)),
+    url('../images/retro-pizza.gif');
+  background-blend-mode: screen;
+  color: white;
+  text-align: left;
 }
 
 .info-center-header {
-    font-family: Romance, serif;
-    font-size: 30px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  font-family: Romance, serif;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .accordion-button {
-    border-radius: 4px; /* Rounded corners */
-    transition: 0.5s linear; /* Transition effect for background color */
-    margin-right: 10px;
-    background-color: rgba(103, 89, 89, 0.3);
+  border-radius: 4px;
+  /* Rounded corners */
+  transition: 0.5s linear;
+  /* Transition effect for background color */
+  margin-right: 10px;
+  background-color: rgba(103, 89, 89, 0.3);
 }
 
 .accordion-button:after {
-    font-size: 15px;
-    content: '\02795';
+  font-size: 15px;
+  content: '\02795';
 }
 
 
 .accordion-button.active {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .active:after {
-    content: '\2796';
+  content: '\2796';
 }
 
 .info-center-frame {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    max-height: 1000px; /* higher than actual height to allow accordion animation on first click */
-    border: 1px solid #c45aeb;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light box shadow */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 1000px;
+  /* higher than actual height to allow accordion animation on first click */
+  border: 1px solid #c45aeb;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  /* Light box shadow */
 }
 
 .info-center-frame p {
-    padding: 10px;
-    line-height: 1.5em;
+  padding: 10px;
+  line-height: 1.5em;
 }
 
 footer {
-    font-family: 'basiic', serif;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 10px 10px 10px;
-    margin: 20px 200px;
-    font-weight: 600;
-    color: white;
+  font-family: 'basiic', serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+  margin: 20px 200px;
+  font-weight: 600;
+  color: white;
 }
 
 .bottom-footer {
-    text-align: center;
+  text-align: center;
 }
 
 /* modal background */
-.modal, .modal2, .modal3, .modal4 {
-    visibility: hidden;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0);
-    opacity: 0;
-    transition: background-color 0.5s ease;
-    /* Updated to black with transparency */
+.modal,
+.modal2,
+.modal3,
+.modal4 {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: background-color 0.5s ease;
+  /* Updated to black with transparency */
 }
 
 .show {
-    visibility: visible;
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 1;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
 }
 
 .modal-container {
-    padding: 30px;
-    /* Slightly more opaque black */
-    border-radius: 8px;
-    border: 1px solid #c45aeb;
-    /* Neon purplish-pink border */
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    /* Neon purplish-pink text */
-    width: auto;
-    max-width: 500px;
+  padding: 30px;
+  /* Slightly more opaque black */
+  border-radius: 8px;
+  border: 1px solid #c45aeb;
+  /* Neon purplish-pink border */
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  /* Neon purplish-pink text */
+  width: auto;
+  max-width: 500px;
 }
 
-.modal-container, .agreement-frame, .registration-form-frame, .search-container{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
+.modal-container,
+.agreement-frame,
+.registration-form-frame,
+.search-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .modal h2 {
-    margin: 0;
-    flex-grow: 1;
-    color: white;
-    /* Neon purplish-pink text color */
-    text-shadow:
-            0 0 5px #f975f7,
-                /* Lighter neon purplish-pink glow */
-            0 0 10px #c45aeb,
-                /* Neon purplish-pink glow */
-            0 0 20px #c45aeb;
-    /* Enhanced neon glow for depth */
-    font-family: 'Press Start 2P', cursive;
-    /* Ensure font consistency */
+  margin: 0;
+  flex-grow: 1;
+  color: white;
+  /* Neon purplish-pink text color */
+  text-shadow:
+    0 0 5px #f975f7,
+    /* Lighter neon purplish-pink glow */
+    0 0 10px #c45aeb,
+    /* Neon purplish-pink glow */
+    0 0 20px #c45aeb;
+  /* Enhanced neon glow for depth */
+  font-family: 'Press Start 2P', cursive;
+  /* Ensure font consistency */
 }
 
 .modal-content {
-    padding: 20px;
-    border: 1px solid #c45aeb;
-    /* Neon purplish-pink border */
-    text-align: left;
+  padding: 20px;
+  border: 1px solid #c45aeb;
+  /* Neon purplish-pink border */
+  text-align: left;
 }
 
 .modal .close-btn {
-    font-family: "Press Start 2P", serif;
-    /* Ensures font consistency with the Login text */
-    font-size: 20px;
-    /* Size of the X button */
-    color: white;
-    /* Sets the initial color to white, matching the Login text */
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    text-shadow:
-            0 0 5px #f975f7,
-                /* Lighter neon purplish-pink glow */
-            0 0 10px #c45aeb,
-                /* Neon purplish-pink glow */
-            0 0 20px #c45aeb;
-    /* Enhanced neon glow for depth */
+  font-family: "Press Start 2P", serif;
+  /* Ensures font consistency with the Login text */
+  font-size: 20px;
+  /* Size of the X button */
+  color: white;
+  /* Sets the initial color to white, matching the Login text */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-shadow:
+    0 0 5px #f975f7,
+    /* Lighter neon purplish-pink glow */
+    0 0 10px #c45aeb,
+    /* Neon purplish-pink glow */
+    0 0 20px #c45aeb;
+  /* Enhanced neon glow for depth */
 }
 
-.modal .close-btn:hover, .modal .close-btn:focus {
-    color: #f975f7;
-    /* Changes color on hover/focus to a lighter neon purplish-pink */
-    text-shadow:
-            0 0 8px #f975f7,
-            0 0 12px #c45aeb,
-            0 0 24px #c45aeb;
-    /* Intensifies the neon glow effect on hover/focus */
-    transform: scale(1.15);
-    /* Scales up slightly for visual feedback */
+.modal .close-btn:hover,
+.modal .close-btn:focus {
+  color: #f975f7;
+  /* Changes color on hover/focus to a lighter neon purplish-pink */
+  text-shadow:
+    0 0 8px #f975f7,
+    0 0 12px #c45aeb,
+    0 0 24px #c45aeb;
+  /* Intensifies the neon glow effect on hover/focus */
+  transform: scale(1.15);
+  /* Scales up slightly for visual feedback */
 }
 
 .modal button[type="submit"] {
-    font-family: "Press Start 2P", serif;
-    background-color: #9932cc;
-    /* Reinstated base color for the button */
-    color: #f0f0f0;
-    /* Maintaining light text for contrast */
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid #c45aeb;
-    /* Pinkish border without glow */
-    border-radius: 4px;
-    box-shadow: none;
-    /* Remove glow effect */
-    transition: background-color 0.2s, border-color 0.2s;
-    /* Smooth transition for color and border */
-    cursor: pointer;
+  font-family: "Press Start 2P", serif;
+  background-color: #9932cc;
+  /* Reinstated base color for the button */
+  color: #f0f0f0;
+  /* Maintaining light text for contrast */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #c45aeb;
+  /* Pinkish border without glow */
+  border-radius: 4px;
+  box-shadow: none;
+  /* Remove glow effect */
+  transition: background-color 0.2s, border-color 0.2s;
+  /* Smooth transition for color and border */
+  cursor: pointer;
 }
 
 .modal button[type="submit"]:hover {
-    background-color: #da70d6;
-    /* Lighter purple on hover */
-    border-color: #f975f7;
-    /* Lighter pinkish border on hover */
+  background-color: #da70d6;
+  /* Lighter purple on hover */
+  border-color: #f975f7;
+  /* Lighter pinkish border on hover */
 }
 
 
 .modal input {
-    width: calc(100% - 10px);
-    font-family: 'Press Start 2P', serif;
-    padding: 12px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    box-sizing: border-box;
-    background-color: #121212;
-    /* Dark background for inputs */
-    color: white;
-    /* Changes text color to white */
-    border: 1px solid #c45aeb;
-    /* Neon border */
+  width: calc(100% - 10px);
+  font-family: 'Press Start 2P', serif;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  background-color: #121212;
+  /* Dark background for inputs */
+  color: white;
+  /* Changes text color to white */
+  border: 1px solid #c45aeb;
+  /* Neon border */
 }
 
 .modal input::placeholder {
-    color: #ccc;
-    /* Lighter color for placeholder text */
+  color: #ccc;
+  /* Lighter color for placeholder text */
 }
 
-.modal input, .modal button {
-    width: calc(100% - 10px);
-    padding: 12px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    box-sizing: border-box;
-    background-color: #121212;
-    /* Neon purplish-pink text */
-    border: 1px solid #c45aeb;
-    /* Neon border */
+.modal input,
+.modal button {
+  width: calc(100% - 10px);
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  background-color: #121212;
+  /* Neon purplish-pink text */
+  border: 1px solid #c45aeb;
+  /* Neon border */
 }
 
-.modal input:focus, .modal button:focus {
-    border-color: #f975f7;
-    /* Lighter neon for focus */
-    box-shadow: 0 0 5px #f975f7, 0 0 10px #f975f7;
-    /* Focus glow effect */
+.modal input:focus,
+.modal button:focus {
+  border-color: #f975f7;
+  /* Lighter neon for focus */
+  box-shadow: 0 0 5px #f975f7, 0 0 10px #f975f7;
+  /* Focus glow effect */
 }
 
 .modal a {
-    color: #c45aeb;
-    /* Neon purplish-pink links */
+  color: #c45aeb;
+  /* Neon purplish-pink links */
 }
 
 .modal a:hover {
-    color: #f975f7;
-    /* Lighter neon purplish-pink on hover */
-    text-decoration: none;
+  color: #f975f7;
+  /* Lighter neon purplish-pink on hover */
+  text-decoration: none;
 }
 
 .modal-content span {
-    color: #c45aeb;
-    /* Neon purplish-pink text for "Don't have an account?" */
-    text-align: center;
-    /* Centering the text */
-    display: block;
-    /* Ensures it is centered by taking the full width */
+  color: #c45aeb;
+  /* Neon purplish-pink text for "Don't have an account?" */
+  text-align: center;
+  /* Centering the text */
+  display: block;
+  /* Ensures it is centered by taking the full width */
 }
 
 .modal-content span a {
-    color: white;
+  color: white;
 }
 
 .agreement-frame {
-    width: 750px;
-    border: 1px solid #00ff00; /* Neon green, reminiscent of old computer screens */
-    box-shadow: 0 0 10px #00ff00; /* Glowing effect */
+  width: 750px;
+  border: 1px solid #00ff00;
+  /* Neon green, reminiscent of old computer screens */
+  box-shadow: 0 0 10px #00ff00;
+  /* Glowing effect */
 }
 
 .agreement-frame div {
-    background-color: rgba(00,00,33,0.7); /* Example body row background color */
-    padding: 10px;
-    text-align: center;
+  background-color: rgba(00, 00, 33, 0.7);
+  /* Example body row background color */
+  padding: 10px;
+  text-align: center;
 }
 
 .agreement-frame p {
-    font-family: 'Romance', serif; /* Changing the font to 'Romance' */
-    padding: 15px;
-    text-align: justify;
-    line-height: 1.6em;
+  font-family: 'Romance', serif;
+  /* Changing the font to 'Romance' */
+  padding: 15px;
+  text-align: justify;
+  line-height: 1.6em;
 }
 
 .agreement-frame div button {
-    font-family: 'Press Start 2P', cursive; /* Matches modal font for consistency */
-    background-color: #ff00ff; /* Bright retro magenta for the background */
-    color: #ffffff; /* White text for contrast */
-    padding: 5px 20px; /* Comfortable padding */
-    border: 2px solid #00ffff; /* Cyan border for that neon retro look */
-    border-radius: 5px; /* Slight rounding of corners */
-    cursor: pointer; /* Hand cursor on hover */
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s; /* Smooth transitions for interactions */
+  font-family: 'Press Start 2P', cursive;
+  /* Matches modal font for consistency */
+  background-color: #ff00ff;
+  /* Bright retro magenta for the background */
+  color: #ffffff;
+  /* White text for contrast */
+  padding: 5px 20px;
+  /* Comfortable padding */
+  border: 2px solid #00ffff;
+  /* Cyan border for that neon retro look */
+  border-radius: 5px;
+  /* Slight rounding of corners */
+  cursor: pointer;
+  /* Hand cursor on hover */
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  /* Smooth transitions for interactions */
 }
 
 .agreement-frame div button:hover {
-    background-color: #ff1493; /* Darker magenta on hover/focus for a tactile feel */
-    color: #00ffff; /* Cyan text on hover/focus for contrast switch */
+  background-color: #ff1493;
+  /* Darker magenta on hover/focus for a tactile feel */
+  color: #00ffff;
+  /* Cyan text on hover/focus for contrast switch */
 }
 
 .agreement-frame div button:active {
-    transform: translateY(2px); /* Slight push effect on click */
+  transform: translateY(2px);
+  /* Slight push effect on click */
 }
 
 .registration-form-frame {
-    width: 450px;
-    border: 1px solid #00ff00; /* Neon green, reminiscent of old computer screens */
-    box-shadow: 0 0 10px #00ff00; /* Glowing effect */
+  width: 450px;
+  border: 1px solid #00ff00;
+  /* Neon green, reminiscent of old computer screens */
+  box-shadow: 0 0 10px #00ff00;
+  /* Glowing effect */
 }
 
 .registration-form {
-    font-family: 'Press Start 2P', cursive;
-    color: #ffffff;
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
 }
 
 .registration-form header {
-    margin-top: 0;
-    border-bottom: 1px solid #ff00ff;
+  margin-top: 0;
+  border-bottom: 1px solid #ff00ff;
 }
 
 .register_form dt {
-    margin-bottom: 10px; /* Spacing between label and input */
+  margin-bottom: 10px;
+  /* Spacing between label and input */
 }
 
 .register_form input {
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-    background-color: #000; /* Black backgrounds for inputs */
-    border: 2px solid #ff00ff; /* Magenta border for inputs */
-    font-family: 'Press Start 2P', cursive;
-    box-shadow: 0 0 10px #ff00ff inset; /* Inner glow for focus */
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  /* Black backgrounds for inputs */
+  border: 2px solid #ff00ff;
+  /* Magenta border for inputs */
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 0 0 10px #ff00ff inset;
+  /* Inner glow for focus */
 }
 
 .register_form input:focus {
-    border-color: #ffff00; /* Bright yellow on focus */
-    box-shadow: 0 0 10px #ffff00 inset;
-    outline: none; /* Removes the default focus outline */
-    transition: 0.5s;
-    color: #fff;
+  border-color: #ffff00;
+  /* Bright yellow on focus */
+  box-shadow: 0 0 10px #ffff00 inset;
+  outline: none;
+  /* Removes the default focus outline */
+  transition: 0.5s;
+  color: #fff;
 }
 
 .registration-form fieldset {
-    background-color: rgba(0,0,0,0.7);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    border: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 0;
 }
 
 .registration-form fieldset dl {
-    margin-right: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
 }
 
 .button-area {
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .button-area button {
-    padding: 10px;
-    background-color: #00ff00; /* Bright neon green */
-    color: #000; /* Black text for contrast */
-    border: none;
-    cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
-    transition: background-color 0.3s, color 0.3s;
+  padding: 10px;
+  background-color: #00ff00;
+  /* Bright neon green */
+  color: #000;
+  /* Black text for contrast */
+  border: none;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .button-area button:hover {
-    background-color: #ff00ff; /* Magenta for hover */
-    color: #fff; /* White text for readability */
+  background-color: #ff00ff;
+  /* Magenta for hover */
+  color: #fff;
+  /* White text for readability */
 }
 
 @keyframes neon-flicker {
 
-    0%,
-    19%,
-    21%,
-    23%,
-    25%,
-    54%,
-    56%,
-    100% {
-        text-shadow:
-                0 0 4px #ff66ff,
-                0 0 11px #ff66ff,
-                0 0 19px #ff66ff,
-                0 0 40px #ff00ff,
-                0 0 80px #ff00ff,
-                0 0 90px #ff00ff,
-                0 0 100px #ff00ff,
-                0 0 150px #ff00ff;
-    }
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 4px #ff66ff,
+      0 0 11px #ff66ff,
+      0 0 19px #ff66ff,
+      0 0 40px #ff00ff,
+      0 0 80px #ff00ff,
+      0 0 90px #ff00ff,
+      0 0 100px #ff00ff,
+      0 0 150px #ff00ff;
+  }
 
-    20%,
-    24%,
-    55% {
-        text-shadow: none;
-    }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
 
 }
 
 @keyframes glowing {
-    0% {
-        text-shadow: 0 0 10px #0000FF, 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF;
-    }
+  0% {
+    text-shadow: 0 0 10px #0000FF, 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF;
+  }
 
-    50% {
-        text-shadow: 0 0 20px #0000FF, 0 0 30px #FF4DA6, 0 0 40px #FF4DA6, 0 0 50px #FF4DA6, 0 0 60px #FF4DA6;
-    }
+  50% {
+    text-shadow: 0 0 20px #0000FF, 0 0 30px #FF4DA6, 0 0 40px #FF4DA6, 0 0 50px #FF4DA6, 0 0 60px #FF4DA6;
+  }
 
-    100% {
-        text-shadow: 0 0 10px #0000FF, 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF;
-    }
+  100% {
+    text-shadow: 0 0 10px #0000FF, 0 0 20px #0000FF, 0 0 30px #0000FF, 0 0 40px #0000FF;
+  }
 }
 
 @keyframes pulsing-glow {
 
-    0%,
-    100% {
-        text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000;
-    }
+  0%,
+  100% {
+    text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000;
+  }
 
-    50% {
-        text-shadow: 0 0 20px #FF6347, 0 0 30px #FF6347, 0 0 40px #FF4500, 0 0 50px #FF4500, 0 0 60px #FF4500;
-    }
+  50% {
+    text-shadow: 0 0 20px #FF6347, 0 0 30px #FF6347, 0 0 40px #FF4500, 0 0 50px #FF4500, 0 0 60px #FF4500;
+  }
 }
 
 @keyframes float {
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(-3px);
-    }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 @keyframes flicker {
 
-    0%,
-    100% {
-        opacity: 1;
-    }
+  0%,
+  100% {
+    opacity: 1;
+  }
 
-    50% {
-        opacity: 0.5;
-    }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    50% {
-        transform: scale(1.05);
-    }
+  50% {
+    transform: scale(1.05);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes shimmer {
-    0% {
-        background-position: -50%;
-    }
+  0% {
+    background-position: -50%;
+  }
 
-    100% {
-        background-position: 150%;
-    }
+  100% {
+    background-position: 150%;
+  }
 }
 
 @keyframes shoot-arrow {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        transform: translateX(20px);
-        opacity: 0;
-    }
+  100% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
 }
 
 @keyframes sparkle {
 
-    0%,
-    100% {
-        opacity: 0;
-    }
+  0%,
+  100% {
+    opacity: 0;
+  }
 
-    50% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
 }
 
 .topics {
-    font-family: 'Webfont', Times, serif;
-    font-size: 30px;
-    border: 1px solid white;
+  font-family: 'Webfont', Times, serif;
+  font-size: 30px;
+  border: 1px solid white;
 }
 
 .topics th {
-    background: #000033;
-    border: 1px solid #8F3E97;
-    text-align: center;
-    padding: 10px 10px 10px 10px;
+  background: #000033;
+  border: 1px solid #8F3E97;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
 }
 
 .subheading {
-    background-image: none !important;
-    border: none;
-    font-family: 'Heart', sans-serif !important;
-    font-size: 1em;
-    /* Slightly larger to make it more readable */
-    text-align: center;
-    color: #66ff66;
-    /* Neon green to fit the theme */
-    font-style: italic;
-    background: rgba(0, 0, 0, 0.7);
-    /* Semi-transparent background to help it stand out */
-    padding: 5px;
-    /* Add padding to create space around the text */
-    border-radius: 5px;
-    /* Rounded corners for a modern look */
-    animation: neon-flicker 1.5s infinite alternate;
-    /* Apply the neon flicker effect */
+  background-image: none !important;
+  border: none;
+  font-family: 'Heart', sans-serif !important;
+  font-size: 1em;
+  /* Slightly larger to make it more readable */
+  text-align: center;
+  color: #66ff66;
+  /* Neon green to fit the theme */
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent background to help it stand out */
+  padding: 5px;
+  /* Add padding to create space around the text */
+  border-radius: 5px;
+  /* Rounded corners for a modern look */
+  animation: neon-flicker 1.5s infinite alternate;
+  /* Apply the neon flicker effect */
 }
 
 /* .subheading { */
@@ -781,402 +831,498 @@ footer {
 /* } */
 
 .center-table-data {
-    text-align: center;
+  text-align: center;
 }
 
 .username {
-    font-family: 'Yoster', serif;
-    color: white;
-    font-size: 1.3em;
-    /* Makes the username larger */
-    font-weight: bold;
-    /* Optional: makes the username stand out more */
-    margin-bottom: 0;
-    /* Reduces space between the username and the role */
+  font-family: 'Yoster', serif;
+  color: white;
+  font-size: 1.3em;
+  /* Makes the username larger */
+  font-weight: bold;
+  /* Optional: makes the username stand out more */
+  margin-bottom: 0;
+  /* Reduces space between the username and the role */
 }
 
-.username a, .post-title a, .post-section a {
-    text-decoration: none;
+.username a,
+.post-title a,
+.post-section a {
+  text-decoration: none;
 }
 
 tbody {
-    font-family: 'basiic', serif;
+  font-family: 'basiic', serif;
 }
 
 .role {
-    font-family: 'basiic', serif;
-    display: inline-block;
-    font-size: 0.8em;
-    font-weight: bold;
-    margin-top: 0;
+  font-family: 'basiic', serif;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 .novice-adventurer {
-    animation: float 3s ease-in-out infinite;
-    color: #7c7c7c;
-    /* Grey for beginners */
+  animation: float 3s ease-in-out infinite;
+  color: #7c7c7c;
+  /* Grey for beginners */
 }
 
 .initiate-acolyte {
-    color: #7FDBFF;
-    animation: flicker 2s linear infinite;
-    /* Light blue for initiates */
+  color: #7FDBFF;
+  animation: flicker 2s linear infinite;
+  /* Light blue for initiates */
 }
 
 .rookie-blacksmith {
-    color: #FFDC00;
-    animation: pulse 2s infinite;
-    /* Yellow for rookies */
+  color: #FFDC00;
+  animation: pulse 2s infinite;
+  /* Yellow for rookies */
 }
 
 .grandmaster-scholar {
-    background: linear-gradient(45deg, #B10DC9, #85144b, #B10DC9, #85144b);
-    background-size: 200% 200%;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: shimmer 3s linear infinite;
+  background: linear-gradient(45deg, #B10DC9, #85144b, #B10DC9, #85144b);
+  background-size: 200% 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
 }
 
 .veteran-archer {
-    color: #2ECC40;
-    /* Green for veterans */
-    text-shadow: 0 0 5px #228B22;
-    /* Soft green glow */
+  color: #2ECC40;
+  /* Green for veterans */
+  text-shadow: 0 0 5px #228B22;
+  /* Soft green glow */
 }
 
 @keyframes clash {
 
-    0%,
-    100% {
-        transform: rotate(0);
-    }
+  0%,
+  100% {
+    transform: rotate(0);
+  }
 
-    50% {
-        transform: rotate(5deg);
-    }
+  50% {
+    transform: rotate(5deg);
+  }
 }
 
 .veteran-archer::after {
-    content: '→';
-    animation: shoot-arrow .5s ease-out infinite;
-    display: inline-block;
-    margin-left: 5px;
+  content: '→';
+  animation: shoot-arrow .5s ease-out infinite;
+  display: inline-block;
+  margin-left: 5px;
 }
 
 .elite-knight {
-    color: #0074D9;
-    /* Blue for elites */
-    text-shadow: 0 0 7px #001f3f;
-    /* Strong blue glow */
+  color: #0074D9;
+  /* Blue for elites */
+  text-shadow: 0 0 7px #001f3f;
+  /* Strong blue glow */
 }
 
 .elite-knight::before {
-    content: '⚔️';
-    display: inline-block;
-    animation: clash 1s infinite;
-    margin-right: 3px;
+  content: '⚔️';
+  display: inline-block;
+  animation: clash 1s infinite;
+  margin-right: 3px;
 }
 
 .master-assassin {
-    color: #FF0000;
-    /* Bright red color for masters */
-    text-shadow: 0 0 7px #FF4500;
-    /* Complementary glow for initial state */
-    animation: pulsing-glow 1s infinite;
-    /* Applying the pulsing glow effect */
+  color: #FF0000;
+  /* Bright red color for masters */
+  text-shadow: 0 0 7px #FF4500;
+  /* Complementary glow for initial state */
+  animation: pulsing-glow 1s infinite;
+  /* Applying the pulsing glow effect */
 }
 
 .journeyman-wizard {
-    color: #F012BE;
-    /* Magenta for grandmasters */
-    text-shadow: 0 0 12px #85144b;
-    /* Deep magenta glow */
+  color: #F012BE;
+  /* Magenta for grandmasters */
+  text-shadow: 0 0 12px #85144b;
+  /* Deep magenta glow */
 }
 
 .journeyman-wizard::before {
-    content: '✨';
-    position: absolute;
-    animation: sparkle 1.5s infinite;
-    margin-left: -20px;
+  content: '✨';
+  position: absolute;
+  animation: sparkle 1.5s infinite;
+  margin-left: -20px;
 }
 
 .forum-master {
-    color: #FF4136;
-    /* Red for forum masters */
-    animation: glowing 1s infinite;
-    /* Stronger glow effect */
+  color: #FF4136;
+  /* Red for forum masters */
+  animation: glowing 1s infinite;
+  /* Stronger glow effect */
 }
 
 .navigation-buttons {
-    text-align: center;
-    padding: 10px 20px 0 20px;
+  text-align: center;
+  padding: 10px 20px 0 20px;
 }
 
 .prev-button,
 .next-button,
 .reply-button,
 .post-button {
-    background-color: #000033;
-    /* Dark blue color to match your theme */
-    color: #ffffff;
-    padding: 10px 20px;
-    margin: 0 5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
-    /* Retro font from your theme */
-    font-size: 0.8em;
-    outline: none;
-    border: 1px solid #8F3E97;
-    transition: 0s;
+  background-color: #000033;
+  /* Dark blue color to match your theme */
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 0 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  /* Retro font from your theme */
+  font-size: 0.8em;
+  outline: none;
+  border: 1px solid #8F3E97;
+  transition: 0s;
 }
 
 .prev-button:hover,
 .next-button:hover,
 .reply-button:hover,
 .post-button:hover {
-    color: #ffffff;
-    background-color: #8F3E97;
-    /* Purple color for hover effect */
+  color: #ffffff;
+  background-color: #8F3E97;
+  /* Purple color for hover effect */
 }
 
 .prev-button:disabled,
 .next-button:disabled {
-    color: #666666;
-    cursor: not-allowed;
+  color: #666666;
+  cursor: not-allowed;
 }
 
 .post-container-template {
-    background-color: #000033;
-    border: 1px transparent;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Light box shadow */
-    margin-bottom: 20px;
+  background-color: #000033;
+  border: 1px transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  /* Light box shadow */
+  margin-bottom: 20px;
 }
 
 .title-header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .title-header p {
-    padding: 10px;
+  padding: 10px;
 }
 
-.post-section-top, .reply-section-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.post-section-top,
+.reply-section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.left-side-buttons .prev-button{
-    margin-left: 20px;
+.left-side-buttons .prev-button {
+  margin-left: 20px;
 }
 
 .post-section {
-    display: flex;
-    padding: 10px;
+  display: flex;
+  padding: 10px;
 }
 
 .poster-info {
-    width: 20%;
-    padding: 5px;
+  width: 20%;
+  padding: 5px;
 }
 
 .poster-info div {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .poster-name a {
-    text-decoration: none;
-    font-size: 25px;
-    font-family: 'Yoster', serif;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Yoster', serif;
 }
 
 .poster-role {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .poster-join-date {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .poster-posts {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .post-area {
-    width: 90%;
+  width: 90%;
 }
 
 .post-info {
-    border-bottom: 1px solid;
+  border-bottom: 1px solid;
 }
 
-.post-name, .post-date {
-    margin-bottom: 8px;
+.post-name,
+.post-date {
+  margin-bottom: 8px;
 }
 
 .post-content {
-    line-height: 1.5rem;
-    padding: 10px 10px 10px 0;
+  line-height: 1.5rem;
+  padding: 10px 10px 10px 0;
 }
 
 .post-content strong {
-    color: #FFF;    
+  color: #FFF;
 }
 
 .reply-area {
-    padding: 10px 100px;
-    text-align: center;
+  padding: 10px 100px;
+  text-align: center;
 }
 
 #reply-box {
-    width: 500px;
-    height: 150px;
-    max-height: 400px;
-    flex-basis: 150px;
-    resize: vertical;
-    padding: 10px;
-    background: #1c1a1a;
-    border: 1px solid #bb00bb;
-    border-radius: 8px;
-    color: white;
-    font-family: 'basiic', serif;
-    font-size: 15px;
-    box-shadow:
-            0 0 4px rgba(187, 0, 187, 1),
-            inset 0 0 4px rgba(0, 187, 0, 0.5);
-    outline: none;
-    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
-    margin-bottom: 20px;
+  width: 500px;
+  height: 150px;
+  max-height: 400px;
+  flex-basis: 150px;
+  resize: vertical;
+  padding: 10px;
+  background: #1c1a1a;
+  border: 1px solid #bb00bb;
+  border-radius: 8px;
+  color: white;
+  font-family: 'basiic', serif;
+  font-size: 15px;
+  box-shadow:
+    0 0 4px rgba(187, 0, 187, 1),
+    inset 0 0 4px rgba(0, 187, 0, 0.5);
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+  margin-bottom: 20px;
 }
 
 #reply-box:focus {
-    box-shadow:
-            0 0 6px rgba(187, 0, 187, 0.7),
-            inset 0 0 6px rgba(0, 187, 0, 0.5);
-    border-color: #009999;
+  box-shadow:
+    0 0 6px rgba(187, 0, 187, 0.7),
+    inset 0 0 6px rgba(0, 187, 0, 0.5);
+  border-color: #009999;
 }
 
 .profile-container {
-    margin: 0px;
+  margin: 0px;
 }
 
 .profile-area {
-    font-size: 25px;
-    display: flex;
-    padding: 25px 250px;
+  font-size: 25px;
+  display: flex;
+  padding: 25px 250px;
 }
 
 .profile-left {
-    width: 40%;
-    padding: 5px;
+  width: 40%;
+  padding: 5px;
 }
 
 .profile-name {
-    color: #fff;
-    font-size: 35px;
-    margin-bottom: 10px;
-    font-family: 'Yoster', serif;
+  color: #fff;
+  font-size: 35px;
+  margin-bottom: 10px;
+  font-family: 'Yoster', serif;
 }
 
 .profile-right {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.profile-info{
-    display: flex;
-    justify-content: space-between;
+.profile-info {
+  display: flex;
+  justify-content: space-between;
 }
 
-.profile-info dt{
-    margin-bottom: 5px;
+.profile-info dt {
+  margin-bottom: 5px;
 }
 
 .terms-container {
-    text-align: center;
+  text-align: center;
 }
 
 .terms-area {
-    font-family: 'basiic', serif;
-    padding: 20px;
-    line-height: 1.6rem;
-    text-align: justify;
+  font-family: 'basiic', serif;
+  padding: 20px;
+  line-height: 1.6rem;
+  text-align: justify;
 }
 
 .terms-container img {
-    width: 500px;
-    height: 500px;
+  width: 500px;
+  height: 500px;
 }
 
 .search-container {
-    opacity: 1;
-    background-color: #222;
-    border: 1px solid #666;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Light box shadow */
-    border-radius: 5px;
-    width: 500px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  opacity: 1;
+  background-color: #222;
+  border: 1px solid #666;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  /* Light box shadow */
+  border-radius: 5px;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .search-container .search-header {
-    background-color: #222;
-    color: #fff;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 20px;
-    padding: 20px 0px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    align-items: center;
-  }
+  background-color: #222;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  padding: 20px 0px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  align-items: center;
+}
 
 .search-input {
-    background-color: #000;
-    border: none;
-    color: #fff;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 13px;
-    padding: 5px;
-    width: 250px;
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 13px;
+  padding: 5px;
+  width: 250px;
 }
 
 .search-button {
-    background-color: #444;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 0 5px 5px 0;
+  background-color: #444;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
 }
 
-.search-box + p {
-    font-size: 18px;
+.search-box+p {
+  font-size: 18px;
 }
 
 .search-result-container {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
 }
 
 .search-result-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .search-result-container p {
-    font-size: 16px;
+  font-size: 16px;
+}
+
+@keyframes neon-flicker-purple {
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 6px #b892ff,
+      /* Very light purple for a brighter glow */
+      0 0 12px #ab7bff,
+      /* Light purple */
+      0 0 18px #9a4dff,
+      /* Medium purple */
+      0 0 24px #8a2be2,
+      /* Deeper purple */
+      0 0 30px #8a2be2,
+      /* Deeper purple for more intense glow */
+      0 0 36px #7a0fec,
+      /* Even deeper purple */
+      0 0 42px #7a0fec,
+      /* Intensify the glow */
+      0 0 48px #6900ff;
+    /* Deep purple for maximum brightness and glow */
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes marquee-animation {
+  from {
+    transform: translateX(100%);
+    /* Start offscreen to the right */
+  }
+
+  to {
+    transform: translateX(-100%);
+    /* End offscreen to the left */
+  }
+}
+
+.index-subheading {
+  background-image: none !important;
+  border: none;
+  font-family: 'Heart', sans-serif !important;
+  text-align: center;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  overflow: hidden;
+  animation: neon-flicker-purple 1.5s infinite alternate;
+  /* Prevent content from overflowing */
+  white-space: nowrap;
+  /* Ensure the text stays in one line */
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee-animation 10s linear infinite;
+  /* Adjust time as needed */
+}
+
+.index-subheading {
+  background-image: none !important;
+  border: none;
+  font-family: 'Heart', sans-serif !important;
+  text-align: center;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+thead th:nth-child(5) {
+  width: 30%;
+  /* or any other value */
+}
+
+/* Target the "Last Post" data cells */
+tbody td:nth-child(5) {
+  width: 30%;
+  /* Ensuring data cells match the header */
 }
