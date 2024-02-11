@@ -284,7 +284,7 @@ td[colspan="4"],
   background-color: rgb(255, 255, 255);
 }
 
-.active:after {
+accordion-button.active:after {
   content: '\2796';
 }
 
@@ -1269,16 +1269,18 @@ tbody {
   background-color: #5E1A1A;
 }
 
-.upvote-btn:hover {
-  background-color: #39FF14;
-  box-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14;
+.upvote-btn.active {
+  background-color: #30aa1e;
+  box-shadow: 0 0 5px rgba(57, 255, 20, 0.5), 0 0 10px rgba(57, 255, 20, 0.5), 0 0 15px rgba(57, 255, 20, 0.5);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(2px);
 }
 
-.downvote-btn:hover {
+.downvote-btn.active {
   background-color: #FF3131;
-  box-shadow: 0 0 5px #FF3131, 0 0 10px #FF3131, 0 0 15px #FF3131;
+  box-shadow: 0 0 5px rgba(255, 49, 49, 0.5), 0 0 10px rgba(255, 49, 49, 0.5), 0 0 15px rgba(255, 49, 49, 0.5);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(2px);
 }
 
 .vote-count {
