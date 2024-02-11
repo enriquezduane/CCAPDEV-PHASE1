@@ -59,7 +59,21 @@
         <div class="profile-header topic-header">
           Create Post
         </div>
-        <!-- //create here -->
+        <form class="create-post-form">
+          <div class="form-group">
+            <label for="post-subject">Subject:</label>
+            <input type="text" id="post-subject" name="post-subject" required placeholder="Enter the post subject..."
+              class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="post-content">Content:</label>
+            <textarea id="post-content" name="post-content" required placeholder="Type your post content here..."
+              class="form-control create-post-textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="post-submit-btn">Post</button>
+          </div>
+        </form>
       </div>
     </div>
   </main>
@@ -181,6 +195,7 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/createPost.js"></script>
 </body>
 
 </html>
