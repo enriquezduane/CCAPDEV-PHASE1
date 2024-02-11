@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
   <script src="js/app.js" defer></script>
 </head>
+
 <body>
   <div class="shade"></div>
   <div class="shade-2"></div>
@@ -22,15 +24,15 @@
     </div>
     <nav class="navbar">
       <a href="index.html">
-        <img  alt="search" src="images/home.gif">
+        <img alt="search" src="images/home.gif">
       </a>
       <a id="register" href="#">
-        <img  alt="register" src="images/register.gif">
+        <img alt="register" src="images/register.gif">
       </a>
       <a id="login" href="#">
         <img alt="register" src="images/login.gif">
       </a>
-      <a href="#">
+      <a id="search" href="#">
         <img alt="search" src="images/search.gif">
       </a>
     </nav>
@@ -106,7 +108,7 @@
 
   <div class="bottom-footer">
     <a href="#">
-      <img alt ="ragnarok logo" src="images/ragnaroklogo.png" style="scale: 0.6;">
+      <img alt="ragnarok logo" src="images/ragnaroklogo.png" style="scale: 0.6;">
     </a>
   </div>
 
@@ -126,8 +128,8 @@
         </form>
         <br style="padding-top: 100px;">
         <span>Don't have an account?<br><br>
-                      <a href="#">Sign up</a>
-                  </span>
+          <a href="#">Sign up</a>
+        </span>
       </div>
     </div>
   </div>
@@ -176,7 +178,8 @@
               <strong><label for="register-username">Username:</label></strong>
             </dt>
             <dt>
-              <input type="text" id="register-username" name="register-username" placeholder="Your username..." required>
+              <input type="text" id="register-username" name="register-username" placeholder="Your username..."
+                required>
             </dt>
           </dl>
 
@@ -185,7 +188,8 @@
               <strong><label for="register-password">Password:</label></strong>
             </dt>
             <dt>
-              <input type="password" id="register-password" name="register-password" placeholder="Your password..." required>
+              <input type="password" id="register-password" name="register-password" placeholder="Your password..."
+                required>
             </dt>
           </dl>
           <div class="button-area">
@@ -199,19 +203,20 @@
 
   <div class="modal4">
     <div class="search-container">
-        <div class="search-header">
-            Search for Posts
-        </div>
-        <div class="search-box">
-            <form action ="/search-results.html">
-                <input type="text" name="query" class="search-input" placeholder="Search...">
-                <button class="search-button" type="submit">Search</button>
-            </form>
-        </div>
-        <p>e.g. Orwell "Animal Farm" -movie</p>
+      <div class="search-header">
+        Search for Posts
       </div>
+      <div class="search-box">
+        <form action="/search-results.html">
+          <input type="text" name="query" class="search-input" placeholder="Search...">
+          <button class="search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <p>e.g. Orwell "Animal Farm" -movie</p>
+    </div>
   </div>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
