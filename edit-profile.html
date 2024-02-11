@@ -57,52 +57,25 @@
     <div class="content-container dashed-black-container container-margin">
       <div class="profile-container post-container-template">
         <div class="profile-header topic-header">
-          Profile Summary
+          Edit Profile
         </div>
-        <div class="profile-area">
-          <div class="profile-left">
-            <div class="profile-name">
-              ShadowDuelist
-            </div>
-            <div class="profile-role novice-adventurer">
-              Novice Adventurer
-            </div>
-            <div class="profile-icon">
-              <img src="images/jejeling.gif" alt="jejeling">
-            </div>
-
+        <form class="edit-profile-form">
+          <div class="form-group">
+            <label for="user-age">Age:</label>
+            <input type="text" id="user-age" name="user-age" class="form-control">
           </div>
-          <div class="profile-right">
-            <div class="edit-profile-container">
-              <button class="edit-profile-button"><a href="edit-profile.html">Edit Profile</a></button>
-            </div>
-            <div>
-              <dl class="profile-info">
-                <dt>Posts:</dt>
-                <dd>1</dd>
-              </dl>
-              <dl class="profile-info">
-                <dt>Age:</dt>
-                <dd>18</dd>
-              </dl>
-            </div>
-            <div>
-              <dl class="profile-info">
-                <dt>Join Date:</dt>
-                <dd>January 29, 2024</dd>
-              </dl>
-              <dl class="profile-info">
-                <dt>Current Server:</dt>
-                <dd>iRO Classic</dd>
-              </dl>
-              <dl class="profile-info">
-                <dt>Short Description:</dt>
-                <dd>im rich yea</dd>
-              </dl>
-            </div>
-
+          <div class="form-group">
+            <label for="user-description">Short Description:</label>
+            <input type="text" id="user-description" name="user-description" class="form-control">
           </div>
-        </div>
+          <div class="form-group">
+            <label for="user-password">New Password:</label>
+            <input type="password" id="user-password" name="user-password" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="update-profile-btn">Update Profile</button>
+          </div>
+        </form>
       </div>
     </div>
   </main>
@@ -224,6 +197,7 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/createPost.js"></script>
 </body>
 
 </html>

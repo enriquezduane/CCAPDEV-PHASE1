@@ -1169,7 +1169,8 @@ tbody {
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  font-size: 15px;
 }
 
 .profile-info {
@@ -1321,7 +1322,8 @@ tbody {
   flex-direction: column;
 }
 
-.create-post-form .form-control, .edit-post-textarea {
+.create-post-form .form-control,
+.edit-post-textarea {
   padding: 0.5rem;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1353,10 +1355,13 @@ tbody {
 }
 
 .edit-post-textarea {
-  height: auto; /* Let it expand vertically */
-  resize: vertical; /* Allow vertical resizing */
+  height: auto;
+  /* Let it expand vertically */
+  resize: vertical;
+  /* Allow vertical resizing */
   border-radius: 5px;
-  margin: 10px 5px 0 0; /* 10px margin from top and left */
+  margin: 10px 5px 0 0;
+  /* 10px margin from top and left */
 }
 
 .index-subheading {
@@ -1563,5 +1568,83 @@ tbody td:nth-child(5) {
   /* Ensuring data cells match the header */
 }
 
-.edit-post-text-area {
+
+.edit-profile-container {
+  text-align: center;
+}
+
+.edit-profile-button {
+  background-color: #000033;
+  color: #ffffff;
+  padding: 5px 15px;
+  border: 1px solid #8F3E97;
+  cursor: pointer;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+}
+
+.edit-profile-button a {
+  text-decoration: none;
+}
+
+.edit-profile-button:hover {
+  background-color: #8F3E97;
+}
+
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  /* Smaller gap for a more compact form */
+  padding: 1rem;
+  align-items: center;
+  /* Center align form elements */
+}
+
+
+.edit-profile-form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-profile-form .form-control {
+  padding: 0.4rem;
+  /* More compact padding */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFF;
+  font-family: 'Press Start 2P', cursive;
+  /* Ensure consistent font */
+  font-size: 0.8rem;
+  /* Smaller font size for compactness */
+  width: 80%;
+  /* Adjust width as needed for compactness */
+}
+
+.edit-profile-form .update-profile-btn {
+  background-color: #000033;
+  color: #ffffff;
+  padding: 8px 16px;
+  /* Adjusted for a more compact button */
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7em;
+  /* Smaller font size for the button */
+  outline: none;
+  border: 1px solid #8F3E97;
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+  width: auto;
+  /* Adjust to content width */
+}
+
+.edit-profile-form .update-profile-btn:hover {
+  color: #ffffff;
+  background-color: #8F3E97;
 }
