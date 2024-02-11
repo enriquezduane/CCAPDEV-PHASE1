@@ -1,46 +1,53 @@
-const upVoteButton = document.querySelector('.upvote-btn');
-const downVoteButton = document.querySelector('.downvote-btn');
-const voteCount = document.querySelector('.vote-count');
-
-let isUpvoted = false; // Variable to track if the post is upvoted
-let isDownvoted = false; // Variable to track if the post is downvoted
+const upvoteButtons = document.querySelectorAll('.upvote-btn');
+const downvoteButtons = document.querySelectorAll('.downvote-btn');
+const voteCounts = document.querySelectorAll('.vote-count');
 
 // Function to handle upvote button click
-function handleUpvote() {
-    if (!isUpvoted) {
-        // Increase the vote count by 1 if the post is not already upvoted
-        voteCount.textContent = parseInt(voteCount.textContent) + 1;
-        isUpvoted = true;
-        upVoteButton.classList.add('active'); // Add active class to upvote button
-        downVoteButton.classList.remove('active'); // Remove active class from downvote button
+function handleUpvote(event) {
+    const voteCount = event.target.nextElementSibling;
+    let currentCount = parseInt(voteCount.textContent);
+    
+    // If the upvote button is not active, increase the count by 1 and mark it as active
+    if (!event.target.classList.contains('active')) {
+        currentCount++;
+        event.target.classList.add('active');
+        // Remove active class from downvote button if present
+        event.target.nextElementSibling.nextElementSibling.classList.remove('active');
     } else {
-        // Decrease the vote count by 1 if the post is already upvoted
-        voteCount.textContent = parseInt(voteCount.textContent) - 1;
-        isUpvoted = false;
-        upVoteButton.classList.remove('active'); // Remove active class from upvote button
+        // If the upvote button is active, decrease the count by 1 and remove the active state
+        currentCount--;
+        event.target.classList.remove('active');
     }
-    isDownvoted = false; // Reset downvote status
+    
+    voteCount.textContent = currentCount;
 }
 
 // Function to handle downvote button click
-function handleDownvote() {
-    if (!isDownvoted) {
-        // Decrease the vote count by 1 if the post is not already downvoted
-        voteCount.textContent = parseInt(voteCount.textContent) - 1;
-        isDownvoted = true;
-        downVoteButton.classList.add('active'); // Add active class to downvote button
-        upVoteButton.classList.remove('active'); // Remove active class from upvote button
+function handleDownvote(event) {
+    const voteCount = event.target.previousElementSibling;
+    let currentCount = parseInt(voteCount.textContent);
+    
+    // If the downvote button is not active, decrease the count by 1 and mark it as active
+    if (!event.target.classList.contains('active')) {
+        currentCount--;
+        event.target.classList.add('active');
+        // Remove active class from upvote button if present
+        event.target.previousElementSibling.previousElementSibling.classList.remove('active');
     } else {
-        // Increase the vote count by 1 if the post is already downvoted
-        voteCount.textContent = parseInt(voteCount.textContent) + 1;
-        isDownvoted = false;
-        downVoteButton.classList.remove('active'); // Remove active class from downvote button
+        // If the downvote button is active, increase the count by 1 and remove the active state
+        currentCount++;
+        event.target.classList.remove('active');
     }
-    isUpvoted = false; // Reset upvote status
+    
+    voteCount.textContent = currentCount;
 }
 
-// Event listener for upvote button
-upVoteButton.addEventListener('click', handleUpvote);
+// Event listeners for upvote buttons
+upvoteButtons.forEach(button => {
+    button.addEventListener('click', handleUpvote);
+});
 
-// Event listener for downvote button
-downVoteButton.addEventListener('click', handleDownvote);
+// Event listeners for downvote buttons
+downvoteButtons.forEach(button => {
+    button.addEventListener('click', handleDownvote);
+});
