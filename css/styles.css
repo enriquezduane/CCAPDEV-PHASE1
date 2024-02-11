@@ -969,7 +969,11 @@ tbody {
 .prev-button,
 .next-button,
 .reply-button,
-.post-button {
+.post-button,
+.edit-button,
+.delete-button,
+.save-button,
+.cancel-button {
   background-color: #000033;
   /* Dark blue color to match your theme */
   color: #ffffff;
@@ -988,7 +992,11 @@ tbody {
 .prev-button:hover,
 .next-button:hover,
 .reply-button:hover,
-.post-button:hover {
+.post-button:hover,
+.edit-button:hover,
+.delete-button:hover,
+.save-button:hover,
+.cancel-button:hover {
   color: #ffffff;
   background-color: #8F3E97;
   /* Purple color for hover effect */
@@ -1088,6 +1096,14 @@ tbody {
 .post-content {
   line-height: 1.5rem;
   padding: 10px 10px 10px 0;
+}
+
+.post-content-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 100px 10px 10px 10px;
+  gap: 10px;
 }
 
 .post-content strong {
@@ -1305,7 +1321,7 @@ tbody {
   flex-direction: column;
 }
 
-.create-post-form .form-control {
+.create-post-form .form-control, .edit-post-textarea {
   padding: 0.5rem;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1334,6 +1350,13 @@ tbody {
 .create-post-form .post-submit-btn:hover {
   color: #ffffff;
   background-color: #8F3E97;
+}
+
+.edit-post-textarea {
+  height: auto; /* Let it expand vertically */
+  resize: vertical; /* Allow vertical resizing */
+  border-radius: 5px;
+  margin: 10px 5px 0 0; /* 10px margin from top and left */
 }
 
 .index-subheading {
@@ -1451,4 +1474,94 @@ tbody td:nth-child(5) {
 
 .create-post-button:hover {
   background-color: #8F3E97;
+}
+
+.index-subheading {
+  background-image: none !important;
+  border: none;
+  font-family: 'Heart', sans-serif !important;
+  text-align: center;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  overflow: hidden;
+  animation: neon-flicker-purple 1.5s infinite alternate;
+  white-space: nowrap;
+}
+
+@keyframes neon-flicker-purple {
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 6px #b892ff,
+      /* Very light purple for a brighter glow */
+      0 0 12px #ab7bff,
+      /* Light purple */
+      0 0 18px #9a4dff,
+      /* Medium purple */
+      0 0 24px #8a2be2,
+      /* Deeper purple */
+      0 0 30px #8a2be2,
+      /* Deeper purple for more intense glow */
+      0 0 36px #7a0fec,
+      /* Even deeper purple */
+      0 0 42px #7a0fec,
+      /* Intensify the glow */
+      0 0 48px #6900ff;
+    /* Deep purple for maximum brightness and glow */
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes marquee-animation {
+  from {
+    transform: translateX(100%);
+    /* Start offscreen to the right */
+  }
+
+  to {
+    transform: translateX(-100%);
+    /* End offscreen to the left */
+  }
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee-animation 10s linear infinite;
+}
+
+.index-subheading {
+  background-image: none !important;
+  border: none;
+  font-family: 'Heart', sans-serif !important;
+  text-align: center;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+thead th:nth-child(5) {
+  width: 30%;
+  /* or any other value */
+}
+
+/* Target the "Last Post" data cells */
+tbody td:nth-child(5) {
+  width: 30%;
+  /* Ensuring data cells match the header */
+}
+
+.edit-post-text-area {
 }
