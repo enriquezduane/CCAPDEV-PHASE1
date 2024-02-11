@@ -818,6 +818,7 @@ footer {
   /* Rounded corners for a modern look */
   animation: neon-flicker 1.5s infinite alternate;
   /* Apply the neon flicker effect */
+  position: relative;
 }
 
 /* .subheading { */
@@ -1413,11 +1414,41 @@ tbody {
 
 thead th:nth-child(5) {
   width: 30%;
-  /* or any other value */
 }
 
-/* Target the "Last Post" data cells */
 tbody td:nth-child(5) {
   width: 30%;
-  /* Ensuring data cells match the header */
+}
+
+.create-post-button-container {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.create-post-button {
+  display: inline-block;
+  background-color: #000033;
+  color: #ffffff;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6em;
+  text-decoration: none;
+  border: 1px solid #C45AEB;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-post-button:hover {
+  background-color: #8F3E97;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(143, 62, 151, 0.5);
+}
+
+.create-post-button {
+  display: inline-block;
+}
+
+.create-post-button:hover {
+  background-color: #8F3E97;
 }
