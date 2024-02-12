@@ -11,6 +11,8 @@ editButtons.forEach(button => {
             // Create a new textarea if it doesn't exist
             textarea = document.createElement('textarea');
             textarea.className = 'edit-post-textarea';
+            postContent.innerHTML = postContent.innerHTML.replace(/<(?!br>)(?!\/br>)/g, '[').replace(/(?<!<br)(?<!<\/br)>/g, ']');
+            console.log(postContent.innerHTML.trim());
             textarea.value = postContent.innerText.trim(); // Use innerText to preserve newline characters
             setDimensions(textarea, postContent);
 
@@ -40,7 +42,7 @@ editButtons.forEach(button => {
 
             // Event listener for the save button
             saveButton.addEventListener('click', () => {
-                postContent.innerHTML = textarea.value.replace(/\n/g, '<br>'); // Convert newline characters to <br> tags
+                postContent.innerHTML = textarea.value.replace(/\n/g, '<br>').replace(/\[/g, '<').replace(/\]/g, '>'); // Convert newline characters to <br> tags
                 postContent.style.display = ''; // Show original post content
                 textarea.remove();
                 buttonsDiv.remove();

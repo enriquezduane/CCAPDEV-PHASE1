@@ -4,6 +4,7 @@
 const modal = document.querySelector('.modal');
 const openModalButton = document.querySelector('#login');
 const closeModalButton = document.querySelector('.close-btn');
+const signUpButton = document.querySelector('.modal-content span a');
 
 openModalButton.addEventListener('click', function() {
     modal.classList.add('show');
@@ -19,6 +20,74 @@ window.addEventListener('click', function(event) {
         modal.classList.remove('show');
     }
 });
+
+// redirect to register modal
+signUpButton.addEventListener('click', function() {
+    modal.classList.remove('show');
+    modal2.classList.add('show');
+})
+
+
+// login form submit
+const loginForm = document.querySelector('.modal-content form');
+
+loginForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    headerDiv = document.querySelector('header div');
+    header = document.querySelector('header');
+    navbar = document.querySelector('.navbar');
+
+    // Create the nav element
+    const nav = document.createElement('nav');
+    nav.className = 'cyberpunk-nav';
+
+    // Create the ul element
+    const ul = document.createElement('ul');
+    ul.className = 'nav-list';
+
+    // Create the li element with dropdown class
+    const li = document.createElement('li');
+    li.className = 'nav-item dropdown';
+
+    // Create the link element with dropbtn class
+    const a = document.createElement('a');
+    a.href = '#';
+    a.className = 'nav-link dropbtn';
+    a.textContent = 'Menu ▼';
+
+    // Create the div element with dropdown-content class
+    const div = document.createElement('div');
+    div.className = 'dropdown-content';
+
+    // Create individual anchor elements for dropdown items
+    const links = ['Profile', 'Log out'];
+    const hrefs = ['profile-1.html', 'index.html'];
+
+    links.forEach((linkText, index) => {
+        const link = document.createElement('a');
+        link.href = hrefs[index];
+        link.textContent = linkText;
+        div.appendChild(link);
+    });
+
+    // remove login display
+    modal.classList.remove('show');
+    openModalButton.style.display = 'none';
+
+    // Add right margin to navbar
+    navbar.style.marginRight = '150px';
+
+    // Append elements to their respective parents
+    a.appendChild(div);
+    li.appendChild(a);
+    ul.appendChild(li);
+    nav.appendChild(ul);
+
+    // Append the nav element to the document body or any other desired parent element
+    headerDiv.appendChild(nav);
+});
+
 
 // registration agreement modal
 const modal2 = document.querySelector('.modal2');
